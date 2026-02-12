@@ -13,7 +13,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
+    <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
@@ -24,7 +24,7 @@ export const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="hidden  md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 fle items-center gap-1">
+          <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => {
               return (
                 <a
@@ -44,7 +44,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile hamburger button */}
-        <button className="md:hidden p-2 text-foreground cursor-pointer" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
+        <button className="md:hidden p-2 text-foreground cursor-pointer" aria-label="Toggle menu" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
           {isMobileMenuOpen ? <X size={24} /> :< Menu size={24} /> }
         </button>
       </nav>
@@ -59,6 +59,7 @@ export const Navbar = () => {
                   href={link.href}
                   key={index}
                   className="text-lg text-muted-foreground hover:text-foreground py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
