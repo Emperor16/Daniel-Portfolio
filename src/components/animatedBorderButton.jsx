@@ -1,8 +1,9 @@
 import { Download } from "lucide-react";
 
-export const AnimatedBorderButton = () => {
+export const AnimatedBorderButton = ({ href="/Daniel-cv.pdf", label= "Download CV" }) => {
     return (
-        <button className="relative bg-transparent border border-border text-foreground hover:border-primary/50 transition-all duration-1000 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-8 py-4 text-lg font-medium rounded-full overflow-visible animate-border">
+        // <button className="relative bg-transparent border border-border text-foreground hover:border-primary/50 transition-all duration-1000 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-8 py-4 text-lg font-medium rounded-full overflow-visible animate-border">
+        <a href={href} download className="relative inline-flex bg-transparent border border-border text-foreground hover:border-primary/50 transition-all duration-1000 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 group px-8 py-4 text-lg font-medium rounded-full overflow-visible animate-border">
             {/* Animated SVG border */}
             <svg
                 className="absolute left-0 top-0 w-full h-full pointer-events-none"
@@ -23,8 +24,8 @@ export const AnimatedBorderButton = () => {
                 />
             </svg>
             <span className="relative z-10 flex items-center justify-center gap-2"> 
-                <Download className="w-5 h-5" /> Download CV
+                <Download className="w-5 h-5" /> {label}
             </span>
-        </button>
+        </a>
     )
 }
