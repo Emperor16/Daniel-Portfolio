@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero } from "@/sections/Hero"
+import { Hero } from "@/sections/hero"
 import { Navbar } from "@/layout/navbar"
 import { About } from "@/sections/About"
 import { Project } from "@/sections/Project"
