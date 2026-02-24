@@ -23,7 +23,7 @@ export const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   },[]);
-  // 1:23:00
+
   return (
     <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"}  z-50`}>
       <nav className="container mx-auto px-6 flex items-center justify-between">
