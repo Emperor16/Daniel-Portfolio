@@ -70,7 +70,9 @@ export const Hero = () => {
                         {/* CTA */}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                             <Button size="lg"> Contact me  <ArrowRight className="w-5 h-5" /> </Button>
-                            <AnimatedBorderButton />
+                            <AnimatedBorderButton>
+                                <Download className="w-5 h-5" /> Download CV
+                            </AnimatedBorderButton>
                         </div>
 
                         {/* Social Links */}
@@ -116,10 +118,13 @@ export const Hero = () => {
                 <div className="mt-20 animate-fade-in animation-delay-600">
                     <p className="text-sm text-muted-foreground mb-6 text-center">Tools and Frameworks I have gained mastery on</p>
                     <div className="relative overflow-hidden">
-                        <div className="flex animate-auto-carousel">{[...skills, ...skills].map((skill, idx) => (
-                            <div key={idx} className="flex-shrink-0 px-8 py-4">
-                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span></div>
-                        ))}</div>
+                        <div className="flex animate-auto-carousel">
+                            {[...skills.map((s, i) => ({ skill: s, id: `a-${i}` })), ...skills.map((s, i) => ({ skill: s, id: `b-${i}` }))].map((item) => (
+                                <div key={item.id} className="flex-shrink-0 px-8 py-4">
+                                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{item.skill}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 

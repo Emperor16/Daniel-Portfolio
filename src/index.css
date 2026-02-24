@@ -108,6 +108,12 @@
     animation: auto-carousel 20s linear infinite;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .animate-auto-carousel {
+      animation: none;
+    }
+  }
+
   .animation-delay-100{
     animation-delay:   100ms;
   }
@@ -134,24 +140,22 @@
 
   @keyframes animated-border {
     0%{
-      stroke-dashoffset: 400;
-
+      stroke-dashoffset: 0;
     }
 
     100%{
-      stroke-dashoffset: -550;
+      stroke-dashoffset: -600;
     }
   }
 
-
-  .group:hover .animate-border-path{
-    animation: animated-border 1.5s linear infinite;
+  .neon-border-path {
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  .animate-border:hover{
-    background-color:  color-mix(in srgb, #26c4b8 15%,  transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%,  transparent);
+  .group:hover .neon-border-path {
+    opacity: 1;
+    animation: animated-border 2s linear infinite;
   }
 
   
