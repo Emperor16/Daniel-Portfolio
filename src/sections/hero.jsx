@@ -1,6 +1,21 @@
-import { ArrowRight, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Twitter , ChevronDown} from "lucide-react";
 import { Button } from "../components/button";
 import { AnimatedBorderButton } from "../components/animatedBorderButton";
+
+
+const skills = [
+    "Typescript",
+    "Next.js",
+    "Nodejs",
+    "React Native",
+    "Flutter",
+    "Python",
+    "MongoDB",
+    "SQL",
+    "Git",
+    "Github Actions",
+    "Figma"
+]
 
 export const Hero = () => {
     return (
@@ -41,7 +56,7 @@ export const Hero = () => {
                         {/* Headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Every <span className="text-primary glow-text"> Services</span><br />is done with
+                                Every <span className="text-primary glow-text"> Service</span><br />is done with
                                 Dexterity and <span className="font-serif italic font-normal text-white"> Excellence</span>
                             </h1>
 
@@ -62,11 +77,11 @@ export const Hero = () => {
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-100">
                             <span className="text-sm text-muted-foreground">Get in contact: </span>
                             {[
-                                { icon: Github, href: "https://github.com/Emperor16"},
+                                { icon: Github, href: "https://github.com/Emperor16" },
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/ayodele-daniel-33484a3a8/" },
                                 { icon: Twitter, href: "https://x.com/DanielO23937500" }
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                                <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
                                     <social.icon className="w-5 h-5" />
                                 </a>
                             ))}
@@ -74,7 +89,7 @@ export const Hero = () => {
                     </div>
                     {/* Right Column - for profile image of Daniel init */}
                     <div className="relative animate-fade-in  animation-delay-300">
-                    
+
                         {/* Daniel Profile */}
                         <div className="relative max-w-md mx-auto">
                             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"
@@ -89,11 +104,32 @@ export const Hero = () => {
                                     </div>
                                 </div>
                                 {/* stats badge */}
+                                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                    <div className="text-2xl font-bold text-primary">5+</div>
+                                    <div className="text-xs text-muted-foreground">Years Experience</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                {/* Skills Cloud */}
+                <div className="mt-20 animate-fade-in animation-delay-600">
+                    <p className="text-sm text-muted-foreground mb-6 text-center">Tools and Frameworks I have gained mastery on</p>
+                    <div className="relative overflow-hidden">
+                        <div className="flex animate-auto-carousel">{[...skills, ...skills].map((skill, idx) => (
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span></div>
+                        ))}</div>
+                    </div>
+                </div>
 
-
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animation-delay-800">
+                    <a 
+                    href="#about"
+                    className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                            <span className="text-sm uppercase tracking-wider">Scroll</span>
+                        <ChevronDown className="w-6 h-6" />
+                    </a>
                 </div>
             </div>
         </section>

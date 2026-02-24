@@ -95,6 +95,19 @@
 
   }
 
+  @keyframes auto-carousel{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-auto-carousel{
+    animation: auto-carousel 20s linear infinite;
+  }
+
   .animation-delay-100{
     animation-delay:   100ms;
   }
