@@ -158,11 +158,25 @@
     animation: animated-border 2s linear infinite;
   }
 
+
+  .timeline-glow{
+    background-color: color-mix(in srg, #26c4b8 15% , transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb,  #26c4b8 20% , transparent);
+  }
+
+  .animated-border:hover{
+    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+  }
+
+  .inline-glow{
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 30%, transparent), 0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
   
-}
 
-
-@keyframes slow-drift {
+  @keyframes slow-drift {
 
 
   0%, 100%{
@@ -183,3 +197,6 @@
     transform: translate(30px, 10px);
   }
 }
+}
+
+
