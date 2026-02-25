@@ -37,6 +37,10 @@
   .font-serif{
     font-family: "Playfair Display", serif;
   }
+
+  button{
+    cursor: pointer;
+  }
   
 }
 
@@ -160,9 +164,9 @@
 
 
   .timeline-glow{
-    background-color: color-mix(in srg, #26c4b8 15% , transparent);
+    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
     backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb,  #26c4b8 20% , transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
   }
 
   .animated-border:hover{
