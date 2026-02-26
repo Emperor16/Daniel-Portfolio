@@ -59,7 +59,7 @@ export const Experience = () => {
                         {experience.map((exp, idx) => (
                             <div
                                 className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                                style={{ animationDelay: `${(idx + 1) * 130}ms` }}
+                                style={{ animationDelay: `${(idx + 1) * 80}ms` }}
                                 key={idx}
                             >
                                 {/* TimeLine Dot */}

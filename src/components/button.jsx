@@ -9,7 +9,7 @@ export const Button = ({className, size= "deafualt", children, ...props}) =>{
     const classes= `${baseClasses} ${sizeClass[size] || sizeClass.default} ${className || ""}`;
     return(
         <button className= {classes} {...props}>
-            <span className="relative fl ex items-center justify-center gap-2">{ children }</span>
+            <span className="relative flex items-center justify-center gap-2">{ children }</span>
         </button>
     
     )

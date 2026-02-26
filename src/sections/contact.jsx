@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "../components/button";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 
 const contactInfo= [
@@ -31,12 +32,51 @@ export const Contact =() =>{
         name: "",
         email: "",
         message: "",
-    })
+    });  
+
+    const [isLoadinig, setIsLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({
+        type: null, 
+        message: "",
+    }); // null, "success", "error"
 
     const submitForm = (e) => {
-        e.preventDefault();
-        console.log(formData);
-    }
+        e.preventDefault(); 
+
+        setIsLoading(true);
+        setSubmitStatus({type: null, message: ""});
+        
+        try{
+            const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY;
+
+            if (!serviceID || !templateID || !publicKey) {
+                throw new Error("Email service is not properly configured, check env file.");
+            }
+
+             await emailjs.sendForm(serviceID, templateID, {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+             }, publicKey);
+
+            setSubmitStatus({
+                type: "success",
+                message: "Message sent successfully!"
+            });
+            setFormData({name: "", email: "", message: ""});
+        }
+        catch(error){
+            console.error("Error sending email:", error);
+            setSubmitStatus({
+                type: "error",
+                message: error.message || "Failed to send message. Please try again later."
+            });
+        }
+        finally{
+            setIsLoading(false);
+        }
     return (<section id="contact" className="py-32 elative overflow-hidden">
        <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-1/4 left-1/4 w-96 -96 bg-primary/5 rouned-full blur-3xl"/>
@@ -56,7 +96,7 @@ export const Contact =() =>{
             </div>
             <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto ">
                <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animaton-delay-300 ">
-                    <form className="space-y-6" action="">
+                    <form className="space-y-6" action="" onSubmit={submitForm}>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                             <input value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}  required placeholder="Your name" type="text" id="name" name="name" className="w-full p-3 rounded-lg bg-secondary-foreground/10 border border-secondary-foreground/20 focus:outline-none focus:ring-2 focus:ring-primary transition-all"/>
@@ -71,10 +111,11 @@ export const Contact =() =>{
                             <textarea value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} required placeholder="Write me a message" id="message" name="message" rows={5} className="w-full p-3 rounded-lg bg-secondary-foreground/10 border border-secondary-foreground/20 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                         </div>
 
-                        <Button className= "w-full" type="submit" size="lg">Send Message <Send/> </Button>
+                        <Button className= "w-full" type="submit" size="lg" disabled={isLoading}>{isLoading ? "Sending..." : "Send Message"} <Send/> </Button>
                     </form>
                 </div> 
             </div>
         </div>
     </section>);
-}
+};
+
