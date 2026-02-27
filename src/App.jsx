@@ -2,9 +2,9 @@ import React from 'react'
 import { Hero } from "@/sections/hero"
 import { Navbar } from "@/layout/navbar"
 import { About } from "@/sections/About"
-import { Project } from "@/sections/Project"
-import { Testimonials } from "@/sections/Testimonials"
-import { Contact } from "@/sections/Contact"
+import { Project } from "@/sections/project"
+import { Testimonials } from "@/sections/testimonials"
+import { Contact } from "@/sections/contact"
 import { Experience } from "@/sections/Experience"
 import { Footer } from './layout/footer'
 
