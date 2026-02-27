@@ -113,7 +113,7 @@ export const Project = () => {
                 </div>
 
                 {/* View all projects button */}
-                <div className="text-center mt-12 animate-fade-in animation-delay-500">
+                <div className="text-center mt-12 animate-fade-in animation-delay-200">
                     <AnimatedBorderButton className="mx-auto flex items-center gap-2">
                         View All Projects
                         <ArrowUpRight className="w-5 h-5" />

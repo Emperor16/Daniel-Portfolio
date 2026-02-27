@@ -115,7 +115,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 {/* Skills Cloud */}
-                <div className="mt-20 animate-fade-in animation-delay-600">
+                <div className="mt-20 animate-fade-in animation-delay-200">
                     <p className="text-sm text-muted-foreground mb-6 text-center">Tools and Frameworks I have gained mastery on</p>
                     <div className="relative overflow-hidden">
                         <div className="flex animate-auto-carousel">
@@ -128,7 +128,7 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animation-delay-800">
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animation-delay-300">
                     <a 
                     href="#about"
                     className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
