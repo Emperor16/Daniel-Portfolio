@@ -69,7 +69,7 @@ export const Project = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-48 object-contain rounded-lg transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-55" />
 
@@ -114,10 +114,30 @@ export const Project = () => {
 
                 {/* View all projects button */}
                 <div className="text-center mt-12 animate-fade-in animation-delay-200">
-                    <AnimatedBorderButton className="mx-auto flex items-center gap-2">
-                        View All Projects
-                        <ArrowUpRight className="w-5 h-5" />
-                    </AnimatedBorderButton>
+                    <a href="https://github.com/Emperor16?tab=repositories" target="_blank" rel="noopener noreferrer" className="mx-auto group relative text-foreground transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center cursor-pointer bg-transparent border border-border">
+                        <svg
+                            className="absolute inset-0 w-full h-full pointer-events-none"
+                            viewBox="0 0 200 60"
+                            preserveAspectRatio="none"
+                            style={{ overflow: "visible" }}
+                        >
+                            <path
+                                d="M 30,1 A 29,29 0 0 0 1,30 L 1,30 A 29,29 0 0 0 30,59 L 170,59 A 29,29 0 0 0 199,30 L 199,30 A 29,29 0 0 0 170,1 Z"
+                                fill="none"
+                                stroke="var(--color-primary)"
+                                strokeWidth="2"
+                                strokeDasharray="150 450"
+                                strokeDashoffset="0"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="neon-border-path"
+                            />
+                        </svg>
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                            View All Projects
+                            <ArrowUpRight className="w-5 h-5" />
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
