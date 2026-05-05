@@ -15,7 +15,7 @@ const contactInfo= [
     {
         icon: Phone,
         label: "Phone",
-        value: "+234 704 914 2018",
+        value: "not available",
     },
 
     {
