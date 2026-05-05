@@ -56,12 +56,16 @@ export const Testimonials = () => {
             <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="container mx-auto px-6 relative z-10">
                 {/* TESTIMONIALS header */}
-                <div className="text-center max-w-3xl mb-16 flex flex-col items-center mx-auto">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider capitalize animate-fade-in">What People Say..</span>
+                <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-16 w-full">
+                    <span className="text-secondary-foreground text-sm font-medium tracking-wider capitalize animate-fade-in">
+                        What People Say..
+                    </span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Testimonials that <span className="italic font-normal font-serif text-white"> Inspire Confidence</span>
+                        Testimonials that <span className="italic font-normal font-serif text-white">Inspire Confidence</span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">Hear from my clients and friends about my work and impact.</p>
+                    <p className="text-muted-foreground animate-fade-in animation-delay-200 text-center max-w-xl">
+                        Hear from my clients and friends about my work and impact.
+                    </p>
                 </div>
 
                 {/* Testimonials Carousels */}
