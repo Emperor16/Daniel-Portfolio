@@ -38,14 +38,16 @@ export const Experience = () => {
         <section id="experience" className="py-32 relative overflow-hidden">
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"/>
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto text-center px-6 relative z-10">
                 {/* Section Header */}
-                <div className="max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">Career Journey</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+                <div className="w-full max-w-3xl mx-auto mb-16 flex flex-col items-center justify-center text-center">
+                    <span className="block w-full text-center text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+                        Career Journey
+                    </span>
+                    <h2 className="w-full text-center text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                         Experience that <span className="italic font-normal font-serif text-white"> Speaks volumes</span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">
+                    <p className="w-full mx-auto text-center text-muted-foreground animate-fade-in animation-delay-200">
                         From startups to established enterprises, my journey has been a tapestry of diverse experiences. Each chapter has enriched my skills and broadened my perspective, allowing me to thrive in dynamic environments and contribute meaningfully to every project I've been a part of.
                     </p>
                 </div>
