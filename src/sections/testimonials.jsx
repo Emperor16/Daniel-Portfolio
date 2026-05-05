@@ -56,7 +56,7 @@ export const Testimonials = () => {
             <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="container mx-auto px-6 relative z-10">
                 {/* TESTIMONIALS header */}
-                <div className="text-center max-w-3xl mb-16 p">
+                <div className="text-center max-w-3xl mb-16 flex flex-col items-center mx-auto">
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider capitalize animate-fade-in">What People Say..</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                         Testimonials that <span className="italic font-normal font-serif text-white"> Inspire Confidence</span>

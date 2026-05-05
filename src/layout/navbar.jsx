@@ -52,7 +52,9 @@ export const Navbar = () => {
         </div>
         {/* cta button  */}
         <div className="hidden md:block">
-          <Button size="sm"> contact me </Button>
+          <a href="#contact" className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-4 py-2 text-sm inline-flex items-center gap-2">
+            <span className="relative flex items-center justify-center gap-2"> contact me </span>
+          </a>
         </div>
 
         {/* Mobile hamburger button */}
@@ -77,7 +79,9 @@ export const Navbar = () => {
                 </a>
               );
             })}
-            <Button onClick={() => setIsMobileMenuOpen(false)} size="sm">Contact Me</Button>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-4 py-2 text-sm inline-flex items-center gap-2">
+              <span className="relative flex items-center justify-center gap-2">Contact Me</span>
+            </a>
           </div>
         </div>
       )}
