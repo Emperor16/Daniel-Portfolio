@@ -28,8 +28,8 @@ const testimonialsData = [
     },
     {
         quote: "Daniel's professionalism and attention to detail are second to none. They consistently delivered projects on time and exceeded our expectations with their innovative approach.",
-        author: "Michael Brown",
-        role: "Founder, Startup Hub",
+        author:"Dipeolu Ayobami Peter",
+        role: "Founder, Nexsus",
         avatar: "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
@@ -56,12 +56,12 @@ export const Testimonials = () => {
             <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="container mx-auto px-6 relative z-10">
                 {/* TESTIMONIALS header */}
-                <div className="text-center max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">What People Say</span>
+                <div className="text-center max-w-3xl mb-16 p">
+                    <span className="text-secondary-foreground text-sm font-medium tracking-wider capitalize animate-fade-in">What People Say..</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                         Testimonials that <span className="italic font-normal font-serif text-white"> Inspire Confidence</span>
                     </h2>
-                    <p className="text-muted-foreground animate-fade-in animation-delay-200">Hear from my clients and colleagues about my work and impact.</p>
+                    <p className="text-muted-foreground animate-fade-in animation-delay-200">Hear from my clients and friends about my work and impact.</p>
                 </div>
 
                 {/* Testimonials Carousels */}

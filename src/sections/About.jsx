@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Rocket, User } from "lucide-react";
+import { Code2, Lightbulb, Rocket, User} from "lucide-react";
 
 const highlights = [
     {
@@ -9,14 +9,15 @@ const highlights = [
 
     {
         icon: Rocket,
-        title: "Passionate Learner",
-        description: "I am constantly learning new technologies and improving my skills. I enjoy exploring new ideas and staying up-to-date with industry trends."
+        title: "Mobile Developer",
+        description: "I am a seasonsed and professional mobie developer, with experience building a full stack mobile apps"
     },
 
     {
         icon: User,
         title: "Collaborative Team Player",
         description: "I believe in the power of teamwork and enjoy collaborating with others to achieve common goals. I am always open to feedback and willing to help others grow."
+
 
     },
 
@@ -39,26 +40,35 @@ export const About = () => {
                         <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">About Me</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Building the Future
+                        Building your thoughts
                         <span className="font-serif italic font-normal text-white">
                             {" "}one line of code at a time
                         </span>
                     </h2>
                     <div className="space-y-6 text-muted-foreground animate-fade-in animation-delay-200">
+                        {/* <p>
+                            I am a passionate and dedicated full stack developer with a strong background in building web applications.
+                             With experience in React, Node.js, and MongoDB, I have a proven track record of creating efficient and scalable solutions. 
+                             I am constantly learning new technologies and improving my skills to stay up-to-date with industry trends. I believe in the power 
+                             of teamwork and enjoy collaborating with others to achieve common goals. I am always open to feedback and willing to help others grow. 
+                             I enjoy solving complex problems and finding creative solutions to optimize processes and improve efficiency.
+                        </p> */}
                         <p>
-                            I am a passionate and dedicated full stack developer with a strong background in building web applications. With experience in React, Node.js, and MongoDB, I have a proven track record of creating efficient and scalable solutions. I am constantly learning new technologies and improving my skills to stay up-to-date with industry trends. I believe in the power of teamwork and enjoy collaborating with others to achieve common goals. I am always open to feedback and willing to help others grow. I enjoy solving complex problems and finding creative solutions to optimize processes and improve efficiency.
-                        </p>
+                            Hello there, I am Daniel a Computer Science student with not just programming skills but also with techincal expertise and 
+                            know-how of writing scalable codes and building problem solving applications.    
+                        </p><br />
                         <p>
-                            I am currently working on a project that will allow users to create and share their own customizable dashboards. This project is built using React, Node.js, and MongoDB. I am excited to continue working on this project and see it grow.
-                        </p>
+                            I am on a pathway of building by collaboration or solo building 50 problem solving application before the end of 2026.
+                            With consistency and dilligence, I have built 10 applications that have solved over 10,000 youths in Ibadan, Oyo State problem.
+                        </p> <br />
                         <p>
-                            When I am not coding, I enjoy spending time with my family, playing video games, and watching movies.
+                            When I am not coding, I enjoy spending time with my family, reading books; major focus on Entrepenuership , Leadership and Spiritual growth.
                         </p>
                     </div>
 
                     {/* Mission Statement */}
                     <div className=" glass rounded-2xl p-6  glow-border animate-fade-in animation-delay-400">
-                        <p className="text-lg font-medium italic text-secondary-foreground">My mission is to build innovative and user-friendly web applications that solve real-world problems and enhance the digital experience for users.</p>
+                        <p className="text-lg font-medium italic text-secondary-foreground">My mission is to build innovative and user-friendly applications that solve real-world problems and enhance the digital experience for my users</p>
                     </div>
                 </div>
                 {/* Right Column */}
