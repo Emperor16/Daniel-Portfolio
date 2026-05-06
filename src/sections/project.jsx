@@ -5,7 +5,7 @@ const projects = [
     {
         title: "LMS Dashboard",
         description: "A comprehensive dashboard for managing learning management systems.",
-        image: "/project1.png",
+        image: "/project1.webp",
         link: "#",
         tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
         github: "https://github.com/Emperor16/lms-dashboard"
@@ -13,7 +13,7 @@ const projects = [
     {
         title: "E-Commerce Platform",
         description: "A full-featured e-commerce platform with payment integration.",
-        image: "/project2.png",
+        image: "/project2.webp",
         link: "#",
         tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
         github: "https://github.com/Emperor16/ecommerce-platform"
@@ -21,7 +21,7 @@ const projects = [
     {
         title: "Task Management App",
         description: "A collaborative task management application for teams.",
-        image: "/project3.png",
+        image: "/project3.webp",
         link: "#",
         tags: ["React", "Firebase", "Material UI", "Redux"],
         github: "https://github.com/Emperor16/task-manager"
@@ -29,7 +29,7 @@ const projects = [
     {
         title: "Analytics Dashboard",
         description: "A real-time analytics dashboard with data visualization.",
-        image: "/project4.png",
+        image: "/project4.webp",
         link: "#",
         tags: ["React", "D3.js", "Node.js", "MongoDB"],
         github: "https://github.com/Emperor16/analytics-dashboard"
@@ -69,6 +69,7 @@ export const Project = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
+                                    loading="lazy"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-55" />
