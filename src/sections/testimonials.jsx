@@ -6,37 +6,37 @@ const testimonialsData = [
         quote: "One thing that stood out to me, whilst he works under my unit, was his courage and his meticulousness to get the job done perfectly and one time",
         author: "Dr. Olalade Seyi",
         role: "Director of Software Development Unit (ITEMS)",
-        avatar: "https://randomuser.me/api/portraits/men/12.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
-        quote: "Daniel's expertise in frontend development is unparalleled. They have a keen eye for design and a deep understanding of user experience, which made our website not only visually stunning but also highly functional.",
+        quote: "Daniel's expertise in frontend development is unparalleled. He has a keen eye for design and a deep understanding of user experience, which made our website not only visually stunning but also highly functional.",
         author: "Eniola Ayodele",
         role: "CEO, Dorola Inc.",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+        avatar: "https://randomuser.me/api/portraits/women/34.jpg"
     },
     {
-        quote: "I had the opportunity to work with Daniel on a complex project, and their ability to navigate challenges and find innovative solutions was truly impressive. They are a valuable asset to any team.",
+        quote: "I had the opportunity to work with Daniel on a complex project, and his ability to navigate challenges and find innovative solutions was truly impressive.He is a valuable asset to any team.",
         author: "Dipeolu Ayobami Peter",
         role: "Founder, Nexsus",
-        avatar: "https://randomuser.me/api/portraits/men/22.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
         quote: "Daniel's ability to understand our vision and translate it into a seamless user experience is exceptional. He is not just a developer but a reliable person, I can count on at all times. Tested and proven worthy!",
         author: "Benjamin Adeyeye",
         role: "Senior UI/UX designer, Tripitify Inc.",
-        avatar: "https://randomuser.me/api/portraits/men/0.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/5.jpg"
     },
     {
-        quote: "Daniel's professionalism and attention to detail are second to none. He consistently understands the brand and SE0 in boosting my online prescence to reach aross 15+ countries",
+        quote: "Daniel's professionalism and attention to detail are second to none. He consistently understands my brand and optimmizing my website to boost my online prescence to reach aross borders 30+ clients reached out in 2 months outside Nigeria.",
         author: "Victoria, Kofo",
-        role: "CEO, Dolly P Fashio World",
+        role: "CEO, Dolly P Fashion World",
         avatar: "https://randomuser.me/api/portraits/women/12.jpg"
     },
     {
         quote: "Daniel's ability to collaborate and communicate effectively made our project a success.He is not only good and skillful at what he does , but also a great team player and makes the working with him fun.",
         author: "Tosin Oluremi",
         role: "Flutter, Mobile Developer",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/42.jpg"
     }
 ];
 
