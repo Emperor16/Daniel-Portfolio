@@ -94,7 +94,7 @@ export const Contact =() =>{
                     Contact <span className="italic font-normal font-serif text-white"> Me</span>
                 </h2>
                 <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                    Whether you have a question, want to collaborate, or just want to say hi, my inbox is always open. I look forward to connecting with you!
+                    Have an million dollar idea, and you need an engineer expertise  (mobile engineer or a web engineer), or trying to gain visibility with your brand, Lets make that happen!
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto ">
