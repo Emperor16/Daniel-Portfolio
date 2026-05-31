@@ -72,7 +72,7 @@ export const Hero = () => {
                             <a href="#contact" className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-8 py-4 text-lg inline-flex items-center gap-2">
                                 <span className="relative flex items-center justify-center gap-2"> Contact me  <ArrowRight className="w-5 h-5" /> </span>
                             </a>
-                            <a href="/Daniel-cv.pdf" download className="group relative text-foreground transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center cursor-pointer bg-transparent border border-border">
+                            <a href="" download className="group relative text-foreground transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center cursor-pointer bg-transparent border border-border">
                                 <svg
                                     className="absolute inset-0 w-full h-full pointer-events-none"
                                     viewBox="0 0 200 60"
