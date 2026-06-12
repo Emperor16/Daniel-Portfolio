@@ -45,7 +45,7 @@ export const Experience = () => {
                         Career Journey
                     </span>
                     <h2 className="w-full text-center text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Experience that <span className="italic font-normal font-serif text-white"> Speaks volumes</span>
+                        Experience that <span className="italic font-normal font-serif text-white">backups claims</span>
                     </h2>
                     <p className="w-full mx-auto text-center text-muted-foreground animate-fade-in animation-delay-200">
                         From startups to established enterprises, my journey has been a tapestry of diverse experiences. Each chapter has enriched my skills and broadened my perspective, allowing me to thrive in dynamic environments and contribute meaningfully to every project I've been a part of.
