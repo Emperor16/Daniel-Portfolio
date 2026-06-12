@@ -48,7 +48,11 @@ export const Experience = () => {
                         Experience that <span className="italic font-normal font-serif text-white">backups claims</span>
                     </h2>
                     <p className="w-full mx-auto text-center text-muted-foreground animate-fade-in animation-delay-200">
-                        From startups to established enterprises, to agecies and brand my journey has been a tapestry of diverse experiences. Each chapter has enriched my skills and broadened my perspective, allowing me to thrive in dynamic environments and contribute meaningfully to every project I've been a part of.
+                        From startups to established enterprises, 
+                        to agecies and brand my journey has been a tapestry of diverse experiences.
+                         Each chapter has enriched my skills and broadened my perspective, 
+                         allowing me to thrive in dynamic environments and contribute
+                          meaningfully to every project I've been a part of.
                     </p>
                 </div>
 
