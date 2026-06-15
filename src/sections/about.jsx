@@ -1,22 +1,17 @@
-import { Code2, Lightbulb, Rocket, User} from "lucide-react";
+import { Code2, Lightbulb, Rocket, User , Smartphone, SmartphoneCharging} from "lucide-react";
 
 const highlights = [
-    {
-        icon: Code2,
-        title: "Full Stack Developer",
-        description: "I have experience in building web applications using React, Node.js, and MongoDB. I am passionate about creating efficient and scalable solutions."
-    },
 
     {
-        icon: Rocket,
-        title: "Mobile Developer",
-        description: "I am a seasonsed and professional mobie developer, with experience building a full stack mobile apps"
+        icon: Smartphone,
+        title: "Flutter Developer",
+        description: "I have experience building cross-platform mobile applications using Flutter, allowing me to create seamless experiences for both iOS and Android users."
     },
 
     {
         icon: User,
-        title: "Collaborative Team Player",
-        description: "I believe in the power of teamwork and enjoy collaborating with others to achieve common goals. I am always open to feedback and willing to help others grow."
+        title: "Witty learner",
+        description: "I am passionate about building and nurturing tech communities. I believe in the power of collaboration and enjoy working with others to achieve common goals."
 
 
     },
@@ -25,8 +20,13 @@ const highlights = [
         icon: Lightbulb,
         title: "Problem Solver",
         description: "I enjoy solving complex problems and finding creative solutions. I am always looking for ways to optimize processes and improve efficiency."
-    }
+    },
 
+    {
+        icon: Smartphone,
+        title: "Flutter Developer",
+        description: "I am a seasonsed and professional flutter developer, with experience building a full stack mobile applications."
+    },
 
 ]
 
