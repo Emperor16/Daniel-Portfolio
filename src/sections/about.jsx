@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Rocket, User , Smartphone, SmartphoneCharging} from "lucide-react";
+import { Code2, Lightbulb, Rocket, User , Smartphone, Brain} from "lucide-react";
 
 const highlights = [
 
@@ -11,9 +11,7 @@ const highlights = [
     {
         icon: User,
         title: "Witty learner",
-        description: "I am passionate about building and nurturing tech communities. I believe in the power of collaboration and enjoy working with others to achieve common goals."
-
-
+        description: "I am a quick and witty learner, always eager to acquire new skills and knowledge. I thrive in dynamic environments where I can adapt and grow."
     },
 
     {
@@ -23,9 +21,9 @@ const highlights = [
     },
 
     {
-        icon: Smartphone,
-        title: "Flutter Developer",
-        description: "I am a seasonsed and professional flutter developer, with experience building a full stack mobile applications."
+        icon: Brain,
+        title: "Excellence Driven",
+        description: "I am driven by a commitment to excellence in everything I do. I strive to deliver high-quality work and continuously improve my skills to achieve the best results."
     },
 
 ]
