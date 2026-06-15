@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Rocket, User , Smartphone, Brain} from "lucide-react";
+import {Lightbulb, User , Smartphone, Brain} from "lucide-react";
 
 const highlights = [
 
