@@ -88,10 +88,21 @@
     0 16px 45px rgba(17, 19, 24, 0.07);
 }
 
-  .glow-border{
-    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
-    inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
-  }
+  .glow-border {
+  box-shadow:
+    0 0 20px
+    color-mix(
+      in srgb,
+      var(--color-primary) 20%,
+      transparent
+    ),
+    inset 0 0 20px
+    color-mix(
+      in srgb,
+      var(--color-primary) 5%,
+      transparent
+    );
+}
 
   @keyframes float {
     0%, 100%{
