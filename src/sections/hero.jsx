@@ -175,7 +175,7 @@ export const Hero = () => {
             <div className="relative rounded-[2.25rem] border border-[#E8E5F0] bg-white p-3 shadow-[0_30px_80px_rgba(59,33,94,0.16)]">
               <div className="relative overflow-hidden rounded-[1.7rem] bg-[#F5F3FF]">
                 <img
-                  src="/daniel_profile.webp"
+                  src="/daniel_profile1.webp"
                   alt="Portrait of Daniel Ayodele"
                   className="aspect-[4/5] w-full object-cover object-top"
                   fetchPriority="high"
