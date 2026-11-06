@@ -186,7 +186,15 @@
     opacity: 1;
     animation: animated-border 2s linear infinite;
   }
-
+.glow-text {
+  text-shadow:
+    0 8px 30px
+    color-mix(
+      in srgb,
+      var(--color-primary) 15%,
+      transparent
+    );
+}
 
   .timeline-glow{
     background-color: color-mix(in srgb, #26c4b8 15%, transparent);
