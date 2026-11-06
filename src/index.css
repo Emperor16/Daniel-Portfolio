@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+  /* Base */
+  --color-background: #ffffff;
+  --color-foreground: #111318;
 
-  --color-card: #141a1f;
+  /* Cards / elevated surfaces */
+  --color-card: #ffffff;
 
-  --color-primary: #20b2a6;
+  /* Brand */
+  --color-primary: #6d28d9;
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  /* Secondary violet */
+  --color-secondary: #f5f3ff;
+  --color-secondary-foreground: #6d28d9;
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  /* Muted UI */
+  --color-muted: #f5f3ff;
+  --color-muted-foreground: #626672;
 
-  --color-border: #242b32;
+  /* Borders */
+  --color-border: #e8e5f0;
+
+  /* Supporting colors */
+  --color-highlight: #8b5cf6;
+  --color-surface: #faf9ff;
+
+  /* Optional extra brand colors */
+  --color-violet-bright: #8b5cf6;
+  --color-violet-soft: #f5f3ff;
 
   --radius: 0.75rem;
-
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
 }
 
 @layer base {
