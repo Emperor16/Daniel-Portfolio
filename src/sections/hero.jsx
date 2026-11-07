@@ -111,7 +111,7 @@ export const Hero = () => {
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#626672]">
               I’m Daniel Ayodele, a full-stack and mobile engineer building
-              thoughtful digital products with TypeScript, Next.js, Node.js
+              result giving digital products with TypeScript, Next.js, Node.js
               and Flutter.
             </p>
 
