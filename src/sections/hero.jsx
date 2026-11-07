@@ -30,12 +30,6 @@ const socialLinks = [
     type: "lucide",
   },
   {
-    label: "LinkedIn",
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/ayodele-daniel-33484a3a8/",
-    type: "lucide",
-  },
-  {
     label: "X",
     icon: "/icons/x.svg",
     href: "https://x.com/DanielO23937500",
@@ -44,7 +38,7 @@ const socialLinks = [
   {
     label: "Instagram",
     icon: "/icons/instagram.svg",
-    href: "YOUR_INSTAGRAM_URL",
+    href: "https://www.instagram.com/daniel.ayodele.775/",
     type: "svg",
   },
 ];
