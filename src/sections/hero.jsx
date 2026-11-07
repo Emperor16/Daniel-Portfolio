@@ -25,21 +25,23 @@ const skills = [
 const socialLinks = [
   {
     label: "GitHub",
-    icon: Github,
+    icon: "/icons/github.svg",
     href: "https://github.com/Emperor16",
+    type: "svg",
   },
   {
-    label: "LinkedIn",
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/ayodele-daniel-33484a3a8/",
-  },
-  {
-    label: "X / Twitter",
-    icon: Twitter,
+    label: "X",
+    icon: "/icons/X.svg",
     href: "https://x.com/DanielO23937500",
+    type: "svg",
+  },
+  {
+    label: "Instagram",
+    icon: "/icons/instagram.svg",
+    href: "https://www.instagram.com/daniel.ayodele.775/",
+    type: "svg",
   },
 ];
-
 const decorativeDots = [
   { left: "6%", top: "20%", size: 8 },
   { left: "18%", top: "78%", size: 5 },
@@ -62,9 +64,11 @@ export const Hero = () => {
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
         <div className="absolute -right-40 -top-40 h-[540px] w-[540px] rounded-full bg-[#F5F3FF] blur-3xl" />
+
         <div className="absolute -left-72 top-1/2 h-[460px] w-[460px] rounded-full bg-[#8B5CF6]/[0.05] blur-3xl" />
 
         <div className="absolute right-[8%] top-[16%] h-64 w-64 rounded-full border border-[#6D28D9]/10" />
+
         <div className="absolute right-[11%] top-[20%] h-48 w-48 rounded-full border border-[#6D28D9]/10" />
 
         {decorativeDots.map((dot, index) => (
@@ -110,7 +114,7 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#626672]">
-              I’m Daniel Ayodele, a full-stack and mobile engineer building
+             Hi Business driven person, I’m Daniel Ayodele. A full-stack and mobile engineer building
               result giving digital products with TypeScript, Next.js, Node.js
               and Flutter.
             </p>
@@ -143,20 +147,36 @@ export const Hero = () => {
               </span>
 
               <div className="flex items-center gap-2">
-                {socialLinks.map(({ label, icon: Icon, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    title={label}
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E5F0] bg-white text-[#626672] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#8B5CF6]/40 hover:bg-[#F5F3FF] hover:text-[#6D28D9] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#8B5CF6]/20"
-                  >
-                    <Icon className="h-5 w-5" aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
+  {socialLinks.map(({ label, icon, href, type }) => {
+    const Icon = icon;
+
+    return (
+      <a
+        key={label}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        title={label}
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E5F0] bg-white text-[#626672] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#8B5CF6]/40 hover:bg-[#F5F3FF] hover:text-[#6D28D9] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#8B5CF6]/20"
+      >
+        {type === "svg" ? (
+          <img
+            src={icon}
+            alt=""
+            aria-hidden="true"
+            className="h-5 w-5"
+          />
+        ) : (
+          <Icon
+            className="h-5 w-5"
+            aria-hidden="true"
+          />
+        )}
+      </a>
+    );
+  })}
+</div>
             </div>
           </div>
 
@@ -190,6 +210,7 @@ export const Hero = () => {
               <div className="text-3xl font-bold tracking-tight text-[#6D28D9]">
                 5+
               </div>
+
               <div className="mt-0.5 text-xs font-medium uppercase tracking-[0.14em] text-[#626672]">
                 Years experience
               </div>
@@ -199,6 +220,7 @@ export const Hero = () => {
             <div className="absolute -bottom-5 right-2 flex items-center gap-3 rounded-2xl border border-[#E8E5F0] bg-white/95 px-5 py-4 shadow-[0_18px_45px_rgba(59,33,94,0.14)] backdrop-blur-md sm:-right-6">
               <span className="relative flex h-3 w-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
+
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
               </span>
 
@@ -206,6 +228,7 @@ export const Hero = () => {
                 <p className="text-sm font-semibold text-[#111318]">
                   Available for work
                 </p>
+
                 <p className="mt-0.5 text-xs text-[#626672]">
                   Open to new opportunities
                 </p>
@@ -213,47 +236,94 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-            
+
+        {/* Skills marquee */}
         <div className="mt-16 pb-4 lg:mt-10">
-    <p className="mb-7 text-center text-sm font-medium text-[#626672]">
-      Tools and frameworks I work with
-    </p>
-
-    <div className="skills-marquee">
-      <div className="skills-marquee-track">
-        {[0, 1].map((group) => (
+           {" "}
+          <p className="mb-7 text-center text-sm font-medium text-[#626672]">
+                Tools and frameworks I work with  {" "}
+          </p>
+           {" "}
           <div
-            key={group}
-            className="skills-marquee-group"
-            aria-hidden={group === 1 ? true : undefined}
+            className="skills-marquee rounded-3xl bg-transparent py-5 transition-[background-color,box-shadow] duration-500 ease-out hover:bg-[#F5F3FF]/40 hover:shadow-[0_16px_45px_rgba(109,40,217,0.06)]"
+            aria-label="Tools and frameworks I work with"
           >
-            {skills.map((skill) => (
-              <div
-                key={`${group}-${skill}`}
-                className="flex shrink-0 items-center gap-12"
-              >
-                <span className="whitespace-nowrap text-xl font-semibold text-[#111318]/55 transition-colors duration-300 hover:text-[#6D28D9] sm:text-2xl">
-                  {skill}
-                </span>
-
-                <span
-                  aria-hidden="true"
-                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#8B5CF6]/60"
-                />
-              </div>
-            ))}
+               {" "}
+            <div className="skills-marquee-track">
+                   {" "}
+              {[0, 1].map((group) => (
+                <div
+                  key={group}
+                  className="skills-marquee-group"
+                  aria-hidden={group === 1 ? true : undefined}
+                >
+                {" "}
+                  {skills.map((skill) => (
+                    <div
+                      key={`${group}-${skill}`}
+                      className="group/skill flex shrink-0 items-center gap-12"
+                    >
+                      {" "}
+                      <span
+                        className="
+                  whitespace-nowrap
+                  text-xl
+                  font-semibold
+                  text-[#111318]/55
+                  transition-[color,transform,text-shadow]
+                  duration-300
+                  ease-out
+                  group-hover/skill:-translate-y-0.5
+                  group-hover/skill:scale-105
+                  group-hover/skill:text-[#6D28D9]
+                  group-hover/skill:[text-shadow:0_8px_20px_rgba(109,40,217,0.15)]
+                  sm:text-1xl
+                "
+                      >
+                                        {skill}
+                                     {" "}
+                      </span>
+                                   {" "}
+                      <span
+                        aria-hidden="true"
+                        className="
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#8B5CF6]/60
+                  transition-[background-color,box-shadow,transform]
+                  duration-300
+                  ease-out
+                  group-hover/skill:scale-125
+                  group-hover/skill:bg-[#8B5CF6]
+                  group-hover/skill:shadow-[0_0_12px_rgba(139,92,246,0.40)]
+                "
+                      />
+                                 {" "}
+                    </div>
+                  ))}
+                         {" "}
+                </div>
+              ))}
+                 {" "}
+            </div>
+             {" "}
           </div>
-        ))}
-    </div>    
-
-        <a
-          href="#about"
-          aria-label="Scroll to about section"
-          className="mx-auto mt-2 hidden flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors hover:text-[#6D28D9] lg:flex"
-        >
-          Scroll
-          <ChevronDown className="h-5 w-5 animate-bounce" aria-hidden="true" />
-        </a>
+           {" "}
+          <a
+            href="#about"
+            aria-label="Scroll to about section"
+            className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
+          >
+                Scroll    {" "}
+            <ChevronDown
+              className="h-5 w-5 motion-safe:animate-bounce"
+              aria-hidden="true"
+            />
+             {" "}
+          </a>
+        </div>
       </div>
     </section>
   );
