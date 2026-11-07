@@ -87,7 +87,7 @@ export const Hero = () => {
           <div className="max-w-3xl">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#E8E5F0] bg-[#F5F3FF] px-4 py-2 text-sm font-medium text-[#6D28D9] shadow-sm">
               <Sparkles className="h-4 w-4" aria-hidden="true" />
-              Full-Stack web developer and Mobile Engineer
+              Full-Stack web and Mobile Engineer
             </div>
 
             <h1 className="max-w-3xl text-[clamp(3.2rem,7vw,6.6rem)] font-bold leading-[0.94] tracking-[-0.055em] text-[#111318]">
