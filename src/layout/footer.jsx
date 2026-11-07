@@ -3,20 +3,22 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/Emperor16/",
-    icon: Github,
+    icon: "/icons/github.svg",
+    href: "https://github.com/Emperor16",
+    type: "svg",
   },
   {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/ayodele-daniel-33484a3a8/",
-    icon: Linkedin,
-  },
-  {
-    label: "Twitter",
+    label: "X",
+    icon: "/icons/X.svg",
     href: "https://x.com/DanielO23937500",
-    icon: Twitter,
+    type: "svg",
   },
-];
+  {
+    label: "Instagram",
+    icon: "/icons/instagram.svg",
+    href: "https://www.instagram.com/daniel.ayodele.775/",
+    type: "svg",
+  },
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
