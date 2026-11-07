@@ -222,7 +222,64 @@
   .inline-glow{
     box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 30%, transparent), 0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
-  
+
+  .skills-marquee {
+  width: 100%;
+  overflow: hidden;
+
+  /* Soft fade on the left and right edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.skills-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: skills-scroll-left 24s linear infinite;
+}
+
+.skills-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+
+@keyframes skills-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: pause when the visitor hovers */
+.skills-marquee:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee-track {
+    animation: none;
+  }
+}
 
   @keyframes slow-drift {
 
