@@ -222,55 +222,78 @@ export const Hero = () => {
         </div>
 
         {/* Skills marquee */}
-        <div className="mt-16 pb-4 lg:mt-10">
-          <p className="mb-7 text-center text-sm font-medium text-[#626672]">
-            Tools and frameworks I work with
-          </p>
-
-          <div
-            className="skills-marquee group/marquee rounded-3xl bg-transparent py-5 transition-[background-color,box-shadow,transform] duration-500 ease-out hover:-translate-y-0.5 hover:bg-[#F5F3FF]/55 hover:shadow-[0_16px_45px_rgba(109,40,217,0.08)]"
-            aria-label="Tools and frameworks I work with"
-          >
-            <div className="skills-marquee-track">
-              {[0, 1].map((group) => (
-                <div
-                  key={group}
-                  className="skills-marquee-group"
-                  aria-hidden={group === 1 ? true : undefined}
-                >
-                  {skills.map((skill) => (
-                    <div
-                      key={`${group}-${skill}`}
-                      className="flex shrink-0 items-center gap-12"
-                    >
-                      <span className="whitespace-nowrap text-xl font-semibold text-[#111318]/55 transition-[color,transform,text-shadow] duration-500 ease-out group-hover/marquee:-translate-y-0.5 group-hover/marquee:text-[#6D28D9]/80 group-hover/marquee:[text-shadow:0_8px_24px_rgba(109,40,217,0.12)] hover:!scale-105 hover:!text-[#6D28D9] sm:text-2xl">
-                        {skill}
-                      </span>
-
-                      <span
-                        aria-hidden="true"
-                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#8B5CF6]/60 transition-[background-color,box-shadow,transform] duration-500 ease-out group-hover/marquee:scale-125 group-hover/marquee:bg-[#8B5CF6] group-hover/marquee:shadow-[0_0_14px_rgba(139,92,246,0.45)]"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <a
-            href="#about"
-            aria-label="Scroll to about section"
-            className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
-          >
-            Scroll
-
-            <ChevronDown
-              className="h-5 w-5 motion-safe:animate-bounce"
-              aria-hidden="true"
-            />
-          </a>
-        </div>
+<div className="mt-16 pb-4 lg:mt-10">
+  <p className="mb-7 text-center text-sm font-medium text-[#626672]">
+    Tools and frameworks I work with
+  </p>
+  <div
+    className="skills-marquee rounded-3xl bg-transparent py-5 transition-[background-color,box-shadow] duration-500 ease-out hover:bg-[#F5F3FF]/40 hover:shadow-[0_16px_45px_rgba(109,40,217,0.06)]"
+    aria-label="Tools and frameworks I work with"
+  >
+    <div className="skills-marquee-track">
+      {[0, 1].map((group) => (
+        <div
+          key={group}
+          className="skills-marquee-group"
+          aria-hidden={group === 1 ? true : undefined}
+        >
+          {skills.map((skill) => (
+            <div
+              key={`${group}-${skill}`}
+              className="group/skill flex shrink-0 items-center gap-12"
+            >
+              <span
+                className="
+                  whitespace-nowrap
+                  text-xl
+                  font-semibold
+                  text-[#111318]/55
+                  transition-[color,transform,text-shadow]
+                  duration-300
+                  ease-out
+                  group-hover/skill:-translate-y-0.5
+                  group-hover/skill:scale-105
+                  group-hover/skill:text-[#6D28D9]
+                  group-hover/skill:[text-shadow:0_8px_20px_rgba(109,40,217,0.15)]
+                  sm:text-2xl
+                "
+              >
+                {skill}
+              </span>
+              <span
+                aria-hidden="true"
+                className="
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#8B5CF6]/60
+                  transition-[background-color,box-shadow,transform]
+                  duration-300
+                  ease-out
+                  group-hover/skill:scale-125
+                  group-hover/skill:bg-[#8B5CF6]
+                  group-hover/skill:shadow-[0_0_12px_rgba(139,92,246,0.40)]
+                "
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+  <a
+    href="#about"
+    aria-label="Scroll to about section"
+    className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
+  >
+    Scroll
+    <ChevronDown
+      className="h-5 w-5 motion-safe:animate-bounce"
+      aria-hidden="true"
+    />
+  </a>
+</div>
       </div>
     </section>
   );
