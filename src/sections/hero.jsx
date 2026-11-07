@@ -27,19 +27,27 @@ const socialLinks = [
     label: "GitHub",
     icon: Github,
     href: "https://github.com/Emperor16",
+    type: "lucide",
   },
   {
     label: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/ayodele-daniel-33484a3a8/",
+    type: "lucide",
   },
   {
-    label: "X / Twitter",
-    icon: Twitter,
+    label: "X",
+    icon: "/icons/x.svg",
     href: "https://x.com/DanielO23937500",
+    type: "svg",
+  },
+  {
+    label: "Instagram",
+    icon: "/icons/instagram.svg",
+    href: "YOUR_INSTAGRAM_URL",
+    type: "svg",
   },
 ];
-
 const decorativeDots = [
   { left: "6%", top: "20%", size: 8 },
   { left: "18%", top: "78%", size: 5 },
