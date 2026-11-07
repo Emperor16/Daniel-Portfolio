@@ -112,7 +112,7 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#626672]">
-              I’m Daniel Ayodele, a full-stack and mobile engineer building
+             Hi Business driven person, I’m Daniel Ayodele. A full-stack and mobile engineer building
               result giving digital products with TypeScript, Next.js, Node.js
               and Flutter.
             </p>
@@ -245,7 +245,7 @@ export const Hero = () => {
                       key={`${group}-${skill}`}
                       className="group/skill flex shrink-0 items-center gap-12"
                     >
-                                   {" "}
+                      {" "}
                       <span
                         className="
                   whitespace-nowrap
@@ -259,7 +259,7 @@ export const Hero = () => {
                   group-hover/skill:scale-105
                   group-hover/skill:text-[#6D28D9]
                   group-hover/skill:[text-shadow:0_8px_20px_rgba(109,40,217,0.15)]
-                  sm:text-2xl
+                  sm:text-1xl
                 "
                       >
                                         {skill}
