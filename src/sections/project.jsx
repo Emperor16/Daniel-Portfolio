@@ -49,7 +49,7 @@ export const Project = () => {
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">Experiences</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100">
                         Projects that
-                        <span className="font-serif italic font-normal text-black">drives resuluts</span>
+                        <span className="font-serif italic font-normal #dd0e0e"> drives resuluts</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
                         A selection of my recent works, from designing to building software applications that solve real-world problems.
