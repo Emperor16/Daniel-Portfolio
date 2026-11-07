@@ -54,7 +54,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative isolate min-h-screen overflow-hidden bg-white text-[#111318]"
+      className="relative isolate min-h-screen overflow-x-hidden bg-white text-[#111318]"
     >
       {/* Soft background decoration */}
       <div
