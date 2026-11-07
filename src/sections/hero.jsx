@@ -118,7 +118,7 @@ export const Hero = () => {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contact"
-                className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-[#6D28D9] px-7 py-3.5 font-semibold text-black shadow-[0_14px_35px_rgba(109,40,217,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#5B21B6] hover:shadow-[0_18px_40px_rgba(109,40,217,0.32)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#8B5CF6]/30"
+                className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-[#6D28D9] px-7 py-3.5 font-semibold text-white shadow-[0_14px_35px_rgba(109,40,217,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#5B21B6] hover:shadow-[0_18px_40px_rgba(109,40,217,0.32)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#8B5CF6]/30"
               >
                 Let’s work together
                 <ArrowRight
