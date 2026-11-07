@@ -25,9 +25,9 @@ const skills = [
 const socialLinks = [
   {
     label: "GitHub",
-    icon: Github,
+    icon: "/icons/github.svg",
     href: "https://github.com/Emperor16",
-    type: "lucide",
+    type: "svg",
   },
   {
     label: "X",
