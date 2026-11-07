@@ -214,23 +214,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Skills */}
-        <div className="mt-24 border-t border-[#E8E5F0] py-7 lg:mt-16">
-          <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#626672]">
-            Technologies I work with
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="text-sm font-semibold text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+        
 
         <a
           href="#about"
