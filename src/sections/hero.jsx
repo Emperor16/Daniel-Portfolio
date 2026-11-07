@@ -54,7 +54,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative isolate min-h-screen overflow-hidden bg-white text-[#111318]"
+      className="relative isolate min-h-screen overflow-x-hidden bg-white text-[#111318]"
     >
       {/* Soft background decoration */}
       <div
@@ -87,7 +87,7 @@ export const Hero = () => {
           <div className="max-w-3xl">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#E8E5F0] bg-[#F5F3FF] px-4 py-2 text-sm font-medium text-[#6D28D9] shadow-sm">
               <Sparkles className="h-4 w-4" aria-hidden="true" />
-              Full-Stack and Mobile Engineer
+              Full-Stack web and Mobile Engineer
             </div>
 
             <h1 className="max-w-3xl text-[clamp(3.2rem,7vw,6.6rem)] font-bold leading-[0.94] tracking-[-0.055em] text-[#111318]">
@@ -111,7 +111,7 @@ export const Hero = () => {
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#626672]">
               I’m Daniel Ayodele, a full-stack and mobile engineer building
-              thoughtful digital products with TypeScript, Next.js, Node.js
+              result giving digital products with TypeScript, Next.js, Node.js
               and Flutter.
             </p>
 
@@ -213,24 +213,38 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+            
+        <div className="mt-16 pb-4 lg:mt-10">
+    <p className="mb-7 text-center text-sm font-medium text-[#626672]">
+      Tools and frameworks I work with
+    </p>
 
-        {/* Skills */}
-        <div className="mt-24 border-t border-[#E8E5F0] py-7 lg:mt-16">
-          <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#626672]">
-            Technologies I work with
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+    <div className="skills-marquee">
+      <div className="skills-marquee-track">
+        {[0, 1].map((group) => (
+          <div
+            key={group}
+            className="skills-marquee-group"
+            aria-hidden={group === 1 ? true : undefined}
+          >
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="text-sm font-semibold text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
+              <div
+                key={`${group}-${skill}`}
+                className="flex shrink-0 items-center gap-12"
               >
-                {skill}
-              </span>
+                <span className="whitespace-nowrap text-xl font-semibold text-[#111318]/55 transition-colors duration-300 hover:text-[#6D28D9] sm:text-2xl">
+                  {skill}
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#8B5CF6]/60"
+                />
+              </div>
             ))}
           </div>
-        </div>
+        ))}
+    </div>    
 
         <a
           href="#about"

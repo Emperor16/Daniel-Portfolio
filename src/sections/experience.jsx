@@ -1,16 +1,16 @@
 const experience = [
     {
         period: "2023 - Present",
-        role: "Senior Frontend Engineer",
-        company: "Tech Solutions Inc.",
-        description: "Leading Frontend architecture for enterprise business products",
+        role: "Lead Frontend Engineer",
+        company: "CelebratePal",
+        description: "Leading Frontend architecture, accountable for deliverables and monitored user rentention",
         technologies: ["React", "TypeScript", "NextJS", "GraphQL"],
         current: true
     },
     {
         period: "2022 - 2023",
         role: "Frontend Engineer",
-        company: "Tremindds Innovation Ltd",
+        company: "ITEMS - UI",
         description: "Leading Frontend architecture for business products",
         technologies: ["React", "TypeScript", "NextJS", "GraphQL"],
         current: false
@@ -18,15 +18,15 @@ const experience = [
     {
         period: "2021 - 2022",
         role: "Full Stack Developer",
-        company: "Digital Agency Co.",
-        description: "Developed and maintained web applications for various clients",
+        company: "Trueminds Limited",
+        description: "Developed and maintained web applications for various clients of the organization",
         technologies: ["React", "Node.js", "MongoDB", "Express"],
         current: false
     },
     {
         period: "2020 - 2021",
         role: "Junior Developer",
-        company: "StartUp Hub",
+        company: "Solatium Limited",
         description: "Built responsive web interfaces and learned modern development practices",
         technologies: ["JavaScript", "React", "CSS", "Git"],
         current: false

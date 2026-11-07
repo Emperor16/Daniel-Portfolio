@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "../components/button";
-import {Menu, X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -15,76 +14,181 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    }
+      setIsScrolled(window.scrollY > 30);
+    };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  },[]);
+  }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"}  z-50`}>
-      <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 pt-4">
+        <nav
+          className={`
+            pointer-events-auto
+            relative
+            rounded-[1.5rem]
+            border border-white/10
+            backdrop-blur-xl
+            transition-all duration-500 ease-out
+            ${
+              isScrolled
+                ? "bg-background/75 shadow-xl shadow-black/10"
+                : "bg-background/45 shadow-lg shadow-black/5"
+            }
+          `}
         >
-          DAN <span className="text-primary">.</span>
-        </a>
-
-        {/* Desktop nav */}
-        <div className="hidden  md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link, index) => {
-              return (
-                <a
-                  href={link.href}
-                  key={index}
-                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors"
-                >
-                  {link.label}
-                </a>
-              );
-            })}
-          </div>
-        </div>
-        {/* cta button  */}
-        <div className="hidden md:block">
-          <a href="#contact" className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-4 py-2 text-sm inline-flex items-center gap-2">
-            <span className="relative flex items-center justify-center gap-2"> contact me </span>
-          </a>
-        </div>
-
-        {/* Mobile hamburger button */}
-        <button className="md:hidden p-2 text-foreground cursor-pointer" aria-label="Toggle menu" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
-          {isMobileMenuOpen ? <X size={24} /> :< Menu size={24} /> }
-        </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => {
-              return (
-                <a
-                  href={link.href}
-                  key={index}
-                  className="text-lg text-muted-foreground hover:text-foreground py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              );
-            })}
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-4 py-2 text-sm inline-flex items-center gap-2">
-              <span className="relative flex items-center justify-center gap-2">Contact Me</span>
+          {/* Main navbar */}
+          <div className="flex h-16 items-center justify-between px-4 sm:px-6">
+            {/* Logo */}
+            <a
+              href="#"
+              className="shrink-0 text-xl font-bold tracking-tight transition-colors hover:text-primary"
+            >
+              DAN <span className="text-primary">.</span>
             </a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center">
+              <div className="flex items-center gap-1 rounded-full border border-white/5 bg-white/5 p-1">
+                {navLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    key={link.href}
+                    className="
+                      rounded-full
+                      px-4 py-2
+                      text-sm
+                      text-muted-foreground
+                      transition-all duration-300
+                      hover:bg-white/10
+                      hover:text-foreground
+                    "
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop CTA */}
+            <div className="hidden md:block">
+              <a
+                href="#contact"
+                className="
+                  inline-flex items-center justify-center
+                  rounded-full
+                  bg-primary
+                  px-5 py-2.5
+                  text-sm font-medium
+                  text-primary-foreground
+                  shadow-lg shadow-primary/20
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:bg-primary/90
+                  hover:shadow-primary/30
+                  focus:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-primary
+                "
+              >
+                Contact Me
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="
+                md:hidden
+                flex h-10 w-10
+                items-center justify-center
+                rounded-full
+                bg-white/5
+                text-foreground
+                transition-colors
+                hover:bg-white/10
+                cursor-pointer
+              "
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+              onClick={() =>
+                setIsMobileMenuOpen((prev) => !prev)
+              }
+            >
+              {isMobileMenuOpen ? (
+                <X size={20} />
+              ) : (
+                <Menu size={20} />
+              )}
+            </button>
           </div>
-        </div>
-      )}
+
+          {/* Mobile Menu */}
+          <div
+            className={`
+              grid md:hidden
+              transition-all duration-300 ease-out
+              ${
+                isMobileMenuOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
+              }
+            `}
+          >
+            <div className="overflow-hidden">
+              <div className="border-t border-white/10 px-4 pb-4 pt-3">
+                <div className="flex flex-col gap-1">
+                  {navLinks.map((link) => (
+                    <a
+                      href={link.href}
+                      key={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="
+                        rounded-xl
+                        px-4 py-3
+                        text-sm
+                        text-muted-foreground
+                        transition-colors
+                        hover:bg-white/10
+                        hover:text-foreground
+                      "
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+
+                  <a
+                    href="#contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="
+                      mt-3
+                      inline-flex
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-primary
+                      px-4 py-3
+                      text-sm font-medium
+                      text-primary-foreground
+                      transition-colors
+                      hover:bg-primary/90
+                    "
+                  >
+                    Contact Me
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };
