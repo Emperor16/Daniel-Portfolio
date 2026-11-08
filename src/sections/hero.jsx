@@ -306,11 +306,11 @@ export const Hero = () => {
                          {" "}
                 </div>
               ))}
-                 {" "}
+              {" "}
             </div>
-             {" "}
+            {" "}
           </div>
-           {" "}
+           {" "}
           <a
             href="#about"
             aria-label="Scroll to about section"
