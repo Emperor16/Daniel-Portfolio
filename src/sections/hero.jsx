@@ -316,7 +316,7 @@ export const Hero = () => {
             aria-label="Scroll to about section"
             className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
           >
-                Scroll    {" "}
+             Scroll {" "}
             <ChevronDown
               className="h-5 w-5 motion-safe:animate-bounce"
               aria-hidden="true"
