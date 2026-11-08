@@ -300,10 +300,10 @@ export const Hero = () => {
                   group-hover/skill:shadow-[0_0_12px_rgba(139,92,246,0.40)]
                 "
                       />
-                                 {" "}
+                      {" "}
                     </div>
                   ))}
-                         {" "}
+                    {" "}
                 </div>
               ))}
               {" "}
