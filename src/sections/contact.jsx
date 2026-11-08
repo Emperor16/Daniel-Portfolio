@@ -90,7 +90,7 @@ export const Contact = () => {
                         Contact <span className="italic font-normal font-serif text-white"> Me</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        Have a million-dollar idea and need engineering expertise (mobile or web), or trying to gain visibility with your brand? Let's make that happen!
+                        Have a million-dollar idea and need engineering expertise, or trying to gain visibility with your brand? Let's make that happen!
                     </p>
                 </div>
                 
