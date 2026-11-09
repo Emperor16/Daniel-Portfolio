@@ -427,3 +427,18 @@
     animation: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .motion-safe\:animate-bounce {
+    animation: none !important;
+  }
+
+  .animate-ping {
+    animation: none !important;
+  }
+}
