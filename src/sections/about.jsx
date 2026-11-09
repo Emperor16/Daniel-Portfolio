@@ -167,7 +167,7 @@ export const About = () => {
             <Reveal
               direction="up"
               distance={18}
-              delay={300}
+              delay={360}
               duration={700}
             >
               <div className="group relative mt-9 overflow-hidden rounded-2xl border border-border bg-secondary/55 p-6 transition duration-300 hover:border-primary/20 hover:bg-secondary">
