@@ -189,3 +189,119 @@ export const Experience = () => {
                     >
                       {/* Decorative sequence number */}
                       <span
+                        aria-hidden="true"
+                        className={`
+                          absolute top-4
+                          font-serif text-6xl italic
+                          leading-none text-primary/[0.06]
+                          transition-colors duration-300
+                          group-hover:text-primary/[0.10]
+                          ${isLeft ? "left-5" : "right-5"}
+                        `}
+                      >
+                        {itemNumber}
+                      </span>
+
+                      {/* Period */}
+                      <div
+                        className={`
+                          relative mb-5 flex items-center gap-2
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        <CalendarDays
+                          className="h-4 w-4 text-primary"
+                          aria-hidden="true"
+                        />
+
+                        <span className="text-sm font-semibold text-primary">
+                          {item.period}
+                        </span>
+
+                        {item.current && (
+                          <span className="ml-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-emerald-700">
+                            Current
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="relative text-xl font-bold tracking-[-0.025em] text-foreground md:text-2xl">
+                        {item.role}
+                      </h3>
+
+                      <div
+                        className={`
+                          relative mt-2 flex items-center gap-2
+                          text-muted-foreground
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        <BriefcaseBusiness
+                          className="h-4 w-4 shrink-0"
+                          aria-hidden="true"
+                        />
+
+                        <p className="font-medium">
+                          {item.company}
+                        </p>
+                      </div>
+
+                      <p className="relative mt-5 text-sm leading-7 text-muted-foreground">
+                        {item.description}
+                      </p>
+
+                      {/* Technologies */}
+                      <div
+                        className={`
+                          relative mt-6 flex flex-wrap gap-2
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        {item.technologies.map((technology) => (
+                          <span
+                            key={technology}
+                            className="
+                              rounded-full
+                              border border-border
+                              bg-secondary/60
+                              px-3 py-1.5
+                              text-xs font-semibold
+                              text-muted-foreground
+                              transition duration-300
+                              hover:border-primary/30
+                              hover:bg-secondary
+                              hover:text-primary
+                            "
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Bottom interaction accent */}
+                      <div
+                        aria-hidden="true"
+                        className={`
+                          absolute bottom-0 h-px
+                          bg-gradient-to-r
+                          from-primary to-highlight
+                          transition-[width] duration-500
+                          group-hover:w-[calc(100%-3rem)]
+                          ${
+                            isLeft
+                              ? "right-6 w-0"
+                              : "left-6 w-0"
+                          }
+                        `}
+                      />
+                    </article>
+                  </Reveal>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
