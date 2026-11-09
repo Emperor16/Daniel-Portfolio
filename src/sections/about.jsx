@@ -53,4 +53,174 @@ export const About = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20"></div>
+        <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+          
+          {/* =================================
+              LEFT COLUMN
+          ================================= */}
+          <div>
+            {/* Section eyebrow */}
+            <Reveal
+              direction="up"
+              distance={14}
+              duration={600}
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-8 bg-primary" />
+
+                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                  About me
+                </span>
+              </div>
+            </Reveal>
+
+            {/* Heading */}
+            <Reveal
+              direction="up"
+              distance={22}
+              delay={80}
+              duration={700}
+            >
+              <h2 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-[-0.035em] text-foreground md:text-5xl lg:text-[3.5rem]">
+                Building ideas into{" "}
+                <span className="font-serif font-normal italic text-primary">
+                  useful digital experiences.
+                </span>
+              </h2>
+            </Reveal>
+
+            {/* Biography */}
+            <Reveal
+              direction="up"
+              distance={20}
+              delay={180}
+              duration={700}
+            >
+              <div className="mt-8 max-w-xl space-y-5 text-[1.05rem] leading-8 text-muted-foreground">
+                <p>
+                  I’m Daniel, a Computer Science student and software engineer
+                  focused on building scalable applications that solve
+                  meaningful problems.
+                </p>
+
+                <p>
+                  I’m working toward a personal goal of building 50
+                  problem-solving applications, independently and through
+                  collaboration. That goal keeps me experimenting, learning,
+                  shipping, and improving with every product I build.
+                </p>
+
+                <p>
+                  Away from code, I spend time with family and read around
+                  entrepreneurship, leadership, and spiritual growth.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Mission statement */}
+            <Reveal
+              direction="up"
+              distance={18}
+              delay={300}
+              duration={700}
+            >
+              <div className="group relative mt-9 overflow-hidden rounded-2xl border border-border bg-secondary/55 p-6 transition duration-300 hover:border-primary/20 hover:bg-secondary">
+                
+                {/* Violet accent */}
+                <div
+                  aria-hidden="true"
+                  className="absolute bottom-0 left-0 top-0 w-1 bg-primary"
+                />
+
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                      My mission
+                    </p>
+
+                    <p className="text-lg font-medium leading-7 text-foreground">
+                      Build useful, thoughtful products that solve real
+                      problems and create better digital experiences.
+                    </p>
+                  </div>
+
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="mt-1 h-5 w-5 shrink-0 text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* =================================
+              RIGHT COLUMN
+          ================================= */}
+          <RevealGroup
+            className="grid gap-5 sm:grid-cols-2"
+            direction="up"
+            distance={24}
+            delay={100}
+            stagger={100}
+            duration={700}
+            threshold={0.1}
+            itemClassName="h-full"
+          >
+            {highlights.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <article
+                  key={item.title}
+                  className={`
+                    group relative h-full overflow-hidden
+                    rounded-[1.5rem]
+                    border border-border
+                    bg-background
+                    p-6
+                    shadow-[0_10px_35px_rgba(17,19,24,0.04)]
+                    transition-[transform,border-color,box-shadow,background-color]
+                    duration-300
+                    hover:-translate-y-1.5
+                    hover:border-primary/20
+                    hover:bg-secondary/30
+                    hover:shadow-[0_20px_50px_rgba(109,40,217,0.09)]
+                    ${index % 2 !== 0 ? "sm:translate-y-8" : ""}
+                  `}
+                >
+                  {/* Decorative number */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute right-5 top-4 font-serif text-5xl italic text-primary/[0.06] transition-colors duration-300 group-hover:text-primary/[0.10]"
+                  >
+                    0{index + 1}
+                  </span>
+
+                  {/* Icon */}
+                  <div className="relative mb-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary transition-[transform,background-color] duration-300 group-hover:-rotate-3 group-hover:scale-105 group-hover:bg-primary">
+                    <Icon className="h-6 w-6 transition-colors duration-300 group-hover:text-primary-foreground" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="mb-3 text-xl font-semibold tracking-[-0.02em] text-foreground">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm leading-7 text-muted-foreground">
+                    {item.description}
+                  </p>
+
+                  {/* Bottom accent */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute bottom-0 left-6 right-6 h-px origin-left scale-x-0 bg-gradient-to-r from-primary to-highlight transition-transform duration-500 group-hover:scale-x-100"
+                  />
+                </article>
+              );
+            })}
+          </RevealGroup>
+        </div>
+      </div>
+    </section>
+  );
+};
