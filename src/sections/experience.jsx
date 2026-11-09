@@ -1,97 +1,307 @@
+import { BriefcaseBusiness, CalendarDays } from "lucide-react";
+
+import { Reveal } from "../components/reveal";
+
 const experience = [
-    {
-        period: "2023 - Present",
-        role: "Lead Frontend Engineer",
-        company: "CelebratePal",
-        description: "Leading Frontend architecture, accountable for deliverables and monitored user rentention",
-        technologies: ["React", "TypeScript", "NextJS", "GraphQL"],
-        current: true
-    },
-    {
-        period: "2022 - 2023",
-        role: "Frontend Engineer",
-        company: "ITEMS - UI",
-        description: "Leading Frontend architecture for business products",
-        technologies: ["React", "TypeScript", "NextJS", "GraphQL"],
-        current: false
-    },
-    {
-        period: "2021 - 2022",
-        role: "Full Stack Developer",
-        company: "Trueminds Limited",
-        description: "Developed and maintained web applications for various clients of the organization",
-        technologies: ["React", "Node.js", "MongoDB", "Express"],
-        current: false
-    },
-    {
-        period: "2020 - 2021",
-        role: "Junior Developer",
-        company: "Solatium Limited",
-        description: "Built responsive web interfaces and learned modern development practices",
-        technologies: ["JavaScript", "React", "CSS", "Git"],
-        current: false
-    }
-]
+  {
+    period: "2023 - Present",
+    role: "Lead Frontend Engineer",
+    company: "CelebratePal",
+    description:
+      "Leading frontend architecture, coordinating deliverables, and monitoring product performance and user retention.",
+    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+    current: true,
+  },
+  {
+    period: "2022 - 2023",
+    role: "Frontend Engineer",
+    company: "ITEMS - UI",
+    description:
+      "Led frontend architecture and developed user-facing interfaces for business products.",
+    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+    current: false,
+  },
+  {
+    period: "2021 - 2022",
+    role: "Full-Stack Developer",
+    company: "Trueminds Limited",
+    description:
+      "Developed and maintained web applications for clients across different business needs.",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    current: false,
+  },
+  {
+    period: "2020 - 2021",
+    role: "Junior Developer",
+    company: "Solatium Limited",
+    description:
+      "Built responsive web interfaces while developing practical experience with modern frontend workflows.",
+    technologies: ["JavaScript", "React", "CSS", "Git"],
+    current: false,
+  },
+];
 
 export const Experience = () => {
-    return (
-        <section id="experience" className="py-0 relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"/>
+  return (
+    <section
+      id="experience"
+      className="relative overflow-hidden bg-background py-24 md:py-2"
+    >
+      {/* Ambient background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute -left-56 top-1/3 h-[480px] w-[480px] rounded-full bg-secondary/75 blur-3xl" />
 
-            <div className="container mx-auto text-center px-6 relative z-10">
-                {/* Section Header */}
-                <div className="w-full max-w-3xl mx-auto mb-16 flex flex-col items-center justify-center text-center">
-                    <span className="block w-full text-center text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-                        Career Journey
-                    </span>
-                    <h2 className="w-full text-center text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Experience that <span className="italic font-normal font-serif text-black">backups claims</span>
-                    </h2>
-                    <p className="w-full mx-auto text-center text-muted-foreground animate-fade-in animation-delay-200">
-                        From startups to established enterprises, 
-                        to agecies and brand my journey has been a tapestry of diverse experiences.
-                         Each chapter has enriched my skills and broadened my perspective, 
-                         allowing me to thrive in dynamic environments and contribute
-                          meaningfully to every project I've been a part of.
-                    </p>
-                </div>
+        <div className="absolute -right-56 bottom-10 h-[440px] w-[440px] rounded-full bg-highlight/[0.04] blur-3xl" />
+      </div>
 
-                {/* timeline */}
-                <div className="relative">
-                    <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(38,178,166,0.8)]"/>
+      <div className="container relative z-10 mx-auto px-6">
+        {/* Section header */}
+        <div className="mx-auto mb-16 max-w-3xl text-center md:mb-24">
+          <Reveal
+            direction="up"
+            distance={14}
+            duration={600}
+          >
+            <div className="mb-5 flex items-center justify-center gap-3">
+              <span className="h-px w-8 bg-primary" />
 
-                    {/* Experience Items */}
-                    <div className="space-y-12">
-                        {experience.map((exp, idx) => (
-                            <div
-                                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                                style={{ animationDelay: `${(idx + 1) * 80}ms` }}
-                                key={idx}
-                            >
-                                {/* TimeLine Dot */}
-                                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 rounded-full bg-primary -translate-x-1/2 ring-4 ring-background z-10">
-                                    {exp.current && (<span className="absolute inset-0 rounded-full bg-primary animate-pulse"/>)}
-                                </div>
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                Career journey
+              </span>
 
-                                {/* Experience Content */}
-                                <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}>
-                                    <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
-                                        <span className="text-primary text-sm font-medium">{exp.period}</span>
-                                        <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                                        <p className="text-muted-foreground">{exp.company}</p>
-                                        <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
-                                        <div className="mt-3">
-                                            {exp.technologies.map((tech, techIdx) => (
-                                                <span key={techIdx} className="inline-block bg-primary/10 text-primary text-xs px-2 py-1 rounded mr-2 mt-2">{tech}</span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+              <span className="h-px w-8 bg-primary" />
             </div>
-        </section>
-    );
-}
+          </Reveal>
+
+          <Reveal
+            direction="up"
+            distance={22}
+            delay={80}
+            duration={700}
+          >
+            <h2 className="text-4xl font-bold leading-[1.08] tracking-[-0.04em] text-foreground md:text-5xl lg:text-[3.5rem]">
+              Experience that{" "}
+              <span className="font-serif font-normal italic text-primary">
+                supports the work.
+              </span>
+            </h2>
+          </Reveal>
+
+          <Reveal
+            direction="up"
+            distance={18}
+            delay={160}
+            duration={700}
+          >
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground">
+              Each role has strengthened how I think about engineering,
+              collaboration, ownership, and building digital products around
+              real user needs.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative mx-auto max-w-6xl">
+          {/* Timeline line */}
+          <div
+            aria-hidden="true"
+            className="
+              absolute bottom-0 left-[7px] top-0
+              w-px
+              bg-gradient-to-b
+              from-primary
+              via-highlight/35
+              to-transparent
+              md:left-1/2
+              md:-translate-x-1/2
+            "
+          />
+
+          <div className="space-y-12 md:space-y-16">
+            {experience.map((item, index) => {
+              const isLeft = index % 2 === 0;
+              const itemNumber = String(index + 1).padStart(2, "0");
+
+              return (
+                <div
+                  key={`${item.company}-${item.period}`}
+                  className="relative grid md:grid-cols-2"
+                >
+                  {/* Timeline marker */}
+                  <div
+                    aria-hidden="true"
+                    className="
+                      absolute left-0 top-7 z-20
+                      flex h-[15px] w-[15px]
+                      -translate-x-0
+                      items-center justify-center
+                      rounded-full
+                      border-[3px] border-background
+                      bg-primary
+                      shadow-[0_0_0_4px_rgba(109,40,217,0.10)]
+                      md:left-1/2
+                      md:-translate-x-1/2
+                    "
+                  >
+                    {item.current && (
+                      <span className="absolute inset-0 rounded-full bg-primary motion-safe:animate-ping" />
+                    )}
+                  </div>
+
+                  {/* Experience card */}
+                  <Reveal
+                    direction={isLeft ? "left" : "right"}
+                    distance={28}
+                    duration={750}
+                    threshold={0.12}
+                    className={`
+                      ml-8
+                      md:ml-0
+                      ${
+                        isLeft
+                          ? "md:col-start-1 md:pr-14"
+                          : "md:col-start-2 md:pl-14"
+                      }
+                    `}
+                  >
+                    <article
+                      className={`
+                        group relative overflow-hidden
+                        rounded-[1.5rem]
+                        border border-border
+                        bg-background
+                        p-6
+                        text-left
+                        shadow-[0_12px_40px_rgba(17,19,24,0.05)]
+                        transition-[transform,border-color,box-shadow,background-color]
+                        duration-300
+                        hover:-translate-y-1
+                        hover:border-primary/20
+                        hover:bg-secondary/20
+                        hover:shadow-[0_22px_55px_rgba(109,40,217,0.09)]
+                        md:p-7
+                        ${isLeft ? "md:text-right" : ""}
+                      `}
+                    >
+                      {/* Decorative sequence number */}
+                      <span
+                        aria-hidden="true"
+                        className={`
+                          absolute top-4
+                          font-serif text-6xl italic
+                          leading-none text-primary/[0.06]
+                          transition-colors duration-300
+                          group-hover:text-primary/[0.10]
+                          ${isLeft ? "left-5" : "right-5"}
+                        `}
+                      >
+                        {itemNumber}
+                      </span>
+
+                      {/* Period */}
+                      <div
+                        className={`
+                          relative mb-5 flex items-center gap-2
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        <CalendarDays
+                          className="h-4 w-4 text-primary"
+                          aria-hidden="true"
+                        />
+
+                        <span className="text-sm font-semibold text-primary">
+                          {item.period}
+                        </span>
+
+                        {item.current && (
+                          <span className="ml-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-emerald-700">
+                            Current
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="relative text-xl font-bold tracking-[-0.025em] text-foreground md:text-2xl">
+                        {item.role}
+                      </h3>
+
+                      <div
+                        className={`
+                          relative mt-2 flex items-center gap-2
+                          text-muted-foreground
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        <BriefcaseBusiness
+                          className="h-4 w-4 shrink-0"
+                          aria-hidden="true"
+                        />
+
+                        <p className="font-medium">
+                          {item.company}
+                        </p>
+                      </div>
+
+                      <p className="relative mt-5 text-sm leading-7 text-muted-foreground">
+                        {item.description}
+                      </p>
+
+                      {/* Technologies */}
+                      <div
+                        className={`
+                          relative mt-6 flex flex-wrap gap-2
+                          ${isLeft ? "md:justify-end" : ""}
+                        `}
+                      >
+                        {item.technologies.map((technology) => (
+                          <span
+                            key={technology}
+                            className="
+                              rounded-full
+                              border border-border
+                              bg-secondary/60
+                              px-3 py-1.5
+                              text-xs font-semibold
+                              text-muted-foreground
+                              transition duration-300
+                              hover:border-primary/30
+                              hover:bg-secondary
+                              hover:text-primary
+                            "
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Bottom interaction accent */}
+                      <div
+                        aria-hidden="true"
+                        className={`
+                          absolute bottom-0 h-px
+                          bg-gradient-to-r
+                          from-primary to-highlight
+                          transition-[width] duration-500
+                          group-hover:w-[calc(100%-3rem)]
+                          ${
+                            isLeft
+                              ? "right-6 w-0"
+                              : "left-6 w-0"
+                          }
+                        `}
+                      />
+                    </article>
+                  </Reveal>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
