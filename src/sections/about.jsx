@@ -107,11 +107,12 @@ export const About = () => {
                   collaboration, and product-thinking skills.
                 </p>
               </div>
+              
             </Reveal>
 
             {/* Impact metrics */}
             <Reveal direction="up" distance={18} delay={260} duration={700}>
-              <div className="mt-10 border-y border-border py-6">
+              <div className="mt-8 border-y border-border py-2">
                 <div className="grid grid-cols-3">
                   {metrics.map((metric, index) => (
                     <div
