@@ -36,6 +36,21 @@ const highlights = [
   },
 ];
 
+const metrics = [
+  {
+    value: "10+",
+    label: "Products built",
+  },
+  {
+    value: "10K+",
+    label: "People reached",
+  },
+  {
+    value: "50",
+    label: "Product goal",
+  },
+];
+
 export const About = () => {
   return (
     <section
