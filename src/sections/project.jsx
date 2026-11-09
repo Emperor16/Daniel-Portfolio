@@ -323,7 +323,7 @@ export const Project = () => {
           duration={700}
           threshold={0.2}
         >
-          <div className="mt-20 flex flex-col items-center border-t border-border pt-12 text-center md:mt-0">
+          <div className="mt-20 flex flex-col items-center pt-12 text-center md:mt-0">
             <p className="mb-5 max-w-lg text-sm leading-6 text-muted-foreground">
               Want to explore more experiments, applications, and ongoing
               builds?
