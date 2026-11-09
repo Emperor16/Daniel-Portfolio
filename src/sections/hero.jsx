@@ -300,23 +300,23 @@ export const Hero = () => {
                   group-hover/skill:shadow-[0_0_12px_rgba(139,92,246,0.40)]
                 "
                       />
-                                 {" "}
+                      {" "}
                     </div>
                   ))}
-                         {" "}
+                    {" "}
                 </div>
               ))}
-                 {" "}
+              {" "}
             </div>
-             {" "}
+            {" "}
           </div>
-           {" "}
+           {" "}
           <a
             href="#about"
             aria-label="Scroll to about section"
             className="mx-auto mt-10 flex w-fit flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#626672] transition-colors duration-300 hover:text-[#6D28D9]"
           >
-                Scroll    {" "}
+             Scroll {" "}
             <ChevronDown
               className="h-5 w-5 motion-safe:animate-bounce"
               aria-hidden="true"
