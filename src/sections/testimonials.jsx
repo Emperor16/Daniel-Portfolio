@@ -99,7 +99,30 @@ export const Testimonials = () => {
                                 "{testimonialsData[activeIdx].quote}"
                             </blockquote>
                             <div className="flex items-center gap-4">
-                                <img className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20" src={testimonialsData[activeIdx].avatar} alt={testimonialsData[activeIdx].author} />
+                                {testimonialsData[activeIdx].avatar ? (
+  <img
+    className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
+    src={testimonialsData[activeIdx].avatar}
+    alt={testimonialsData[activeIdx].author}
+  />
+) : (
+  <div
+    aria-hidden="true"
+    className="
+      w-12 h-12
+      rounded-full
+      shrink-0
+      flex items-center justify-center
+      bg-primary/10
+      text-primary
+      text-sm font-bold
+      tracking-[0.08em]
+      ring-2 ring-primary/20
+    "
+  >
+    {getInitials(testimonialsData[activeIdx].author)}
+  </div>
+)}
                                 <div>
                                     <div className="font-semibold text-lg">{testimonialsData[activeIdx].author}</div>
                                     <div className="text-sm text-muted-foreground">{testimonialsData[activeIdx].role}</div>
