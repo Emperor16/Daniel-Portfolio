@@ -53,7 +53,7 @@ export const Project = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-secondary/30 py-24 md:py-32"
+      className="relative overflow-hidden bg-secondary/30 py-24 md:py-20"
     >
       {/* Ambient background */}
       <div
@@ -346,8 +346,6 @@ export const Project = () => {
                 className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 aria-hidden="true"
               />
-
-
             </a>
           </div>
         </Reveal>
