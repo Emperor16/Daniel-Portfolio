@@ -68,7 +68,7 @@ export const About = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+        <div className="grid items-center gap-16 lg:grid-cols-[1fr_1fr] lg:gap-16">
           
           {/* =================================
               LEFT COLUMN
@@ -112,24 +112,18 @@ export const About = () => {
               duration={700}
             >
               <div className="mt-8 max-w-xl space-y-5 text-[1.05rem] leading-8 text-muted-foreground">
-                <p>
-                  I’m Daniel, a Computer Science student and software engineer
-                  focused on building scalable applications that solve
-                  meaningful problems.
-                </p>
+  <p>
+    I’m Daniel, a Computer Science student and software engineer
+    focused on turning real problems into scalable web and mobile
+    products.
+  </p>
 
-                <p>
-                  I’m working toward a personal goal of building 50
-                  problem-solving applications, independently and through
-                  collaboration. That goal keeps me experimenting, learning,
-                  shipping, and improving with every product I build.
-                </p>
-
-                <p>
-                  Away from code, I spend time with family and read around
-                  entrepreneurship, leadership, and spiritual growth.
-                </p>
-              </div>
+  <p>
+    I learn by building. My goal is to create 50 problem-solving
+    products while continually sharpening my engineering,
+    collaboration, and product-thinking skills.
+  </p>
+</div>
             </Reveal>
 
             {/* Impact metrics */}
