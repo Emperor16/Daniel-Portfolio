@@ -2,6 +2,7 @@ import { Lightbulb, User, Smartphone, Brain, ArrowUpRight } from "lucide-react";
 
 import { Reveal } from "../components/reveal";
 import { RevealGroup } from "../components/revealGroup";
+import { CountUp } from "../components/countUp";
 
 const highlights = [
   {
@@ -121,9 +122,13 @@ export const About = () => {
             ${index === 0 ? "pr-4" : "px-4"}
           `}
                     >
-                      <div className="text-3xl font-bold tracking-[-0.04em] text-primary transition-transform duration-300 group-hover:-translate-y-0.5 md:text-4xl">
-                        {metric.value}
-                      </div>
+                      <div className="text-3xl font-bold tabular-nums tracking-[-0.04em] text-primary transition-transform duration-300 group-hover:-translate-y-0.5 md:text-4xl">
+  <CountUp
+    value={metric.value}
+    suffix={metric.suffix}
+    duration={1400}
+  />
+</div>
 
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:normal-case sm:tracking-normal">
                         {metric.label}
