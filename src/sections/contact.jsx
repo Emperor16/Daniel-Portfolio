@@ -349,3 +349,151 @@ export const Contact = () => {
                       h-5 w-5
                       transition-transform
                       duration-300
+                      ${
+                        isLoading
+                          ? ""
+                          : "group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                      }
+                    `}
+                    aria-hidden="true"
+                  />
+                </Button>
+
+                {/* Submission feedback */}
+                {submitStatus.type && (
+                  <div
+                    role="status"
+                    aria-live="polite"
+                    className={`
+                      flex items-start gap-3
+                      rounded-xl
+                      border
+                      p-4
+                      ${
+                        submitStatus.type ===
+                        "success"
+                          ? "border-emerald-500/20 bg-emerald-50 text-emerald-700"
+                          : "border-red-500/20 bg-red-50 text-red-700"
+                      }
+                    `}
+                  >
+                    {submitStatus.type ===
+                    "success" ? (
+                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                    ) : (
+                      <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                    )}
+
+                    <p className="text-sm leading-6">
+                      {submitStatus.message}
+                    </p>
+                  </div>
+                )}
+              </form>
+            </div>
+          </Reveal>
+
+          {/* ==================================
+              CONTACT INFORMATION
+          =================================== */}
+
+          <div className="space-y-6">
+            <Reveal
+              direction="right"
+              distance={28}
+              delay={240}
+              duration={750}
+            >
+              <div className="rounded-3xl border border-border bg-background p-7 shadow-[0_20px_60px_rgba(17,19,24,0.06)] md:p-8">
+                <h3 className="mb-7 text-2xl font-bold tracking-[-0.025em] text-foreground">
+                  Contact Information
+                </h3>
+
+                <RevealGroup
+                  className="space-y-2"
+                  direction="up"
+                  distance={12}
+                  stagger={80}
+                  maxDelay={240}
+                  duration={600}
+                  threshold={0.1}
+                >
+                  {contactInfo.map((info) => {
+                    const Icon = info.icon;
+
+                    return (
+                      <div
+                        key={info.label}
+                        className="group flex items-center gap-4 rounded-2xl p-3 transition duration-300 hover:bg-secondary/50"
+                      >
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary transition duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                          <Icon
+                            className="h-5 w-5"
+                            aria-hidden="true"
+                          />
+                        </div>
+
+                        <div className="min-w-0">
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                            {info.label}
+                          </p>
+
+                          {info.href ? (
+                            <a
+                              href={info.href}
+                              className="mt-1 inline-flex items-center gap-1.5 break-all font-medium text-foreground transition-colors hover:text-primary"
+                            >
+                              {info.value}
+
+                              <ArrowUpRight
+                                className="h-3.5 w-3.5"
+                                aria-hidden="true"
+                              />
+                            </a>
+                          ) : (
+                            <p className="mt-1 font-medium text-foreground">
+                              {info.value}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </RevealGroup>
+              </div>
+            </Reveal>
+
+            {/* Availability */}
+            <Reveal
+              direction="right"
+              distance={22}
+              delay={320}
+              duration={700}
+            >
+              <div className="rounded-3xl border border-primary/10 bg-secondary/60 p-7 md:p-8">
+                <div className="flex items-center gap-3">
+                  <span className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-70 motion-safe:animate-ping" />
+
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
+                  </span>
+
+                  <h3 className="text-xl font-semibold text-foreground">
+                    I am currently available
+                  </h3>
+                </div>
+
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  I am available for freelance work
+                  and internships. Contact me and
+                  let’s build something meaningful
+                  together.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
