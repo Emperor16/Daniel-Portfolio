@@ -309,7 +309,6 @@ export const Project = () => {
                     delay={160}
                     duration={800}
                   >
-                    <div className="mt-20 h-px bg-gradient-to-r from-transparent via-border to-transparent md:mt-28" />
                   </Reveal>
                 )}
               </article>
@@ -324,7 +323,7 @@ export const Project = () => {
           duration={700}
           threshold={0.2}
         >
-          <div className="mt-20 flex flex-col items-center border-t border-border pt-12 text-center md:mt-28">
+          <div className="mt-20 flex flex-col items-center border-t border-border pt-12 text-center md:mt-0">
             <p className="mb-5 max-w-lg text-sm leading-6 text-muted-foreground">
               Want to explore more experiments, applications, and ongoing
               builds?
@@ -347,6 +346,8 @@ export const Project = () => {
                 className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 aria-hidden="true"
               />
+
+
             </a>
           </div>
         </Reveal>
