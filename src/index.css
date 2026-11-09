@@ -410,4 +410,20 @@
 }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--up,
+  .reveal--down,
+  .reveal--left,
+  .reveal--right,
+  .reveal--fade {
+    opacity: 1;
+    transform: none;
+    filter: none;
 
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+
+    animation: none;
+  }
+}
