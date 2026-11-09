@@ -53,7 +53,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-x-hidden bg-background py-24 md:py-32"
+      className="relative overflow-x-hidden bg-background py-24 md:py-0"
     >
       {/* Ambient background */}
       <div
