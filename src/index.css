@@ -118,6 +118,112 @@
 
 
 @layer utilities{
+
+  /* ==========================================
+   CENTRALIZED SCROLL REVEAL SYSTEM
+   ========================================== */
+
+.reveal {
+  --reveal-distance: 24px;
+  --reveal-delay: 0ms;
+  --reveal-duration: 700ms;
+
+  opacity: 0;
+
+  transition-property:
+    opacity,
+    transform,
+    filter;
+
+  transition-duration:
+    var(--reveal-duration);
+
+  transition-delay:
+    var(--reveal-delay);
+
+  transition-timing-function:
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change:
+    opacity,
+    transform;
+
+  backface-visibility: hidden;
+}
+
+
+/* Default upward reveal */
+
+.reveal--up {
+  transform:
+    translate3d(
+      0,
+      var(--reveal-distance),
+      0
+    );
+}
+
+
+/* Downward reveal */
+
+.reveal--down {
+  transform:
+    translate3d(
+      0,
+      calc(var(--reveal-distance) * -1),
+      0
+    );
+}
+
+
+/* Reveal from the left */
+
+.reveal--left {
+  transform:
+    translate3d(
+      calc(var(--reveal-distance) * -1),
+      0,
+      0
+    );
+}
+
+
+/* Reveal from the right */
+
+.reveal--right {
+  transform:
+    translate3d(
+      var(--reveal-distance),
+      0,
+      0
+    );
+}
+
+
+/* Opacity-only reveal */
+
+.reveal--fade {
+  transform: none;
+}
+
+
+/* Final visible state */
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+/*
+ * Remove optimization after reveal.
+ * Keeping will-change indefinitely can waste browser resources.
+ */
+
+.reveal.is-revealed {
+  will-change: auto;
+}
+
   @keyframes fade-in{
     from{
       opacity: 0;
