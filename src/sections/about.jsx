@@ -32,15 +32,18 @@ const highlights = [
 
 const metrics = [
   {
-    value: "10+",
+    value: 10,
+    suffix: "+",
     label: "Products built",
   },
   {
-    value: "10K+",
+    value: 10,
+    suffix: "K+",
     label: "People reached",
   },
   {
-    value: "50",
+    value: 50,
+    suffix: "",
     label: "Product goal",
   },
 ];
@@ -165,7 +168,7 @@ export const About = () => {
               RIGHT COLUMN
           ================================= */}
           <RevealGroup
-            className="grid gap-5 sm:grid-cols-2"
+            className="grid gap-5 sm:grid-cols-2 lg:min-h-[620px] lg:auto-rows-fr"
             direction="up"
             distance={24}
             delay={100}
