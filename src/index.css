@@ -365,6 +365,115 @@
   padding-right: 2rem;
 }
 
+/* ==========================================
+   TESTIMONIAL CAROUSEL TRANSITIONS
+   ========================================== */
+
+.testimonial-slide {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+
+  transition-property:
+    opacity,
+    transform,
+    filter;
+
+  transition-duration: 400ms;
+
+  transition-timing-function:
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+/* Leaving toward the left when moving forward */
+
+.testimonial-slide--leaving.testimonial-slide--next {
+  opacity: 0;
+
+  transform:
+    translate3d(-24px, 0, 0);
+
+  filter: blur(3px);
+
+  transition-duration: 220ms;
+
+  transition-timing-function:
+    cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+/* Leaving toward the right when moving backward */
+
+.testimonial-slide--leaving.testimonial-slide--previous {
+  opacity: 0;
+
+  transform:
+    translate3d(24px, 0, 0);
+
+  filter: blur(3px);
+
+  transition-duration: 220ms;
+
+  transition-timing-function:
+    cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+/* New content starts opposite the exit direction */
+
+.testimonial-slide--entering.testimonial-slide--next {
+  opacity: 0;
+
+  transform:
+    translate3d(24px, 0, 0);
+
+  filter: blur(3px);
+
+  transition: none;
+}
+
+.testimonial-slide--entering.testimonial-slide--previous {
+  opacity: 0;
+
+  transform:
+    translate3d(-24px, 0, 0);
+
+  filter: blur(3px);
+
+  transition: none;
+}
+
+
+/* Fully visible state */
+
+.testimonial-slide--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+  will-change: auto;
+}
+
+
+/* Reduced-motion support */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-slide,
+  .testimonial-slide--leaving,
+  .testimonial-slide--entering,
+  .testimonial-slide--visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+  }
+}
+
 @keyframes skills-scroll-left {
   from {
     transform: translateX(0);
