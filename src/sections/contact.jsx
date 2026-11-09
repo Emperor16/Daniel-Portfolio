@@ -122,7 +122,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-background py-24 md:py-32"
+      className="relative overflow-hidden bg-background py-24 md:py-2"
     >
       {/* Ambient background */}
       <div
