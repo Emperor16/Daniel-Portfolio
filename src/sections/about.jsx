@@ -1,89 +1,56 @@
-import {Lightbulb, User , Smartphone, Brain} from "lucide-react";
+import {
+  Lightbulb,
+  User,
+  Smartphone,
+  Brain,
+  ArrowUpRight,
+} from "lucide-react";
+
+import { Reveal } from "../components/reveal";
+import { RevealGroup } from "../components/revealGroup";
 
 const highlights = [
-
-    {
-        icon: Smartphone,
-        title: "Flutter Developer",
-        description: "I have experience building cross-platform mobile applications using Flutter, allowing me to create seamless experiences for both iOS and Android users."
-    },
-
-    {
-        icon: User,
-        title: "Witty learner",
-        description: "I am a quick and witty learner, always eager to acquire new skills and knowledge. I thrive in dynamic environments where I can adapt and grow."
-    },
-
-    {
-        icon: Lightbulb,
-        title: "Problem Solver",
-        description: "I enjoy solving complex problems and finding creative solutions. I am always looking for ways to optimize processes and improve efficiency."
-    },
-
-    {
-        icon: Brain,
-        title: "Excellence Driven",
-        description: "I am driven by a commitment to excellence in everything I do. I strive to deliver high-quality work and continuously improve my skills to achieve the best results."
-    },
-
-]
+  {
+    icon: Smartphone,
+    title: "Flutter Developer",
+    description:
+      "I build cross-platform mobile applications with Flutter, creating consistent and thoughtful experiences across iOS and Android.",
+  },
+  {
+    icon: User,
+    title: "Curious Learner",
+    description:
+      "I learn quickly, stay curious, and continuously expand my skills so I can adapt to new technologies and unfamiliar challenges.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Problem Solver",
+    description:
+      "I enjoy breaking complex problems into practical solutions, with a focus on creating products that are useful, efficient, and intentional.",
+  },
+  {
+    icon: Brain,
+    title: "Excellence Driven",
+    description:
+      "I care about the details. From architecture to the final interaction, I aim to build work that is reliable, polished, and continually improving.",
+  },
+];
 
 export const About = () => {
-    return <section id="about" className="py-0 relative overflow-x-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-                {/*Left Column */}
-                <div className="space-y-4">
-                    <div className="animate-fade-in">
-                        <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">About Me</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Building your thoughts
-                        <span className="font-serif italic font-normal text-white">
-                            {" "}one line of code at a time
-                        </span>
-                    </h2>
-                    <div className="space-y-6 text-muted-foreground animate-fade-in animation-delay-200">
-                        {/* <p>
-                            I am a passionate and dedicated full stack developer with a strong background in building web applications.
-                             With experience in React, Node.js, and MongoDB, I have a proven track record of creating efficient and scalable solutions. 
-                             I am constantly learning new technologies and improving my skills to stay up-to-date with industry trends. I believe in the power 
-                             of teamwork and enjoy collaborating with others to achieve common goals. I am always open to feedback and willing to help others grow. 
-                             I enjoy solving complex problems and finding creative solutions to optimize processes and improve efficiency.
-                        </p> */}
-                        <p>
-                            Hello there, I am Daniel a Computer Science student with not just programming skills but also with techincal expertise and 
-                            know-how of writing scalable codes and building problem solving applications.    
-                        </p><br />
-                        <p>
-                            I am on a pathway of building by collaboration or solo building 50 problem solving application before the end of 2026.
-                            With consistency and dilligence, I have built 10 applications that have solved over 10,000 youths in Ibadan, Oyo State problem.
-                        </p> <br />
-                        <p>
-                            When I am not coding, I enjoy spending time with my family, reading books; major focus on Entrepenuership , Leadership and Spiritual growth.
-                        </p>
-                    </div>
+  return (
+    <section
+      id="about"
+      className="relative overflow-x-hidden bg-background py-24 md:py-32"
+    >
+      {/* Ambient background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute -left-56 top-20 h-[420px] w-[420px] rounded-full bg-secondary/80 blur-3xl" />
 
-                    {/* Mission Statement */}
-                    <div className=" glass rounded-2xl p-6  glow-border animate-fade-in animation-delay-400">
-                        <p className="text-lg font-medium italic text-secondary-foreground">My mission is to build innovative and user-friendly applications that solve real-world problems and enhance the digital experience for my users</p>
-                    </div>
-                </div>
-                {/* Right Column */}
-                <div className="grid sm:grid-cols-2 gap-6">
-                    {highlights.map((item, idx) =>(
-                        <div key= {idx} className="glass p-6 rounded-2xl animate-fade-in"
-                        style={{animationDelay: `${idx * 100}ms`}}
-                        >
-                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-all">
-                                <item.icon className="h-8 w-8 text-secondary-foreground" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-secondary-foreground mb-2">{item.title}</h3>
-                            <p className="text-muted-foreground">{item.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    </section>;
-}
+        <div className="absolute -right-48 bottom-0 h-[400px] w-[400px] rounded-full bg-highlight/[0.04] blur-3xl" />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20"></div>
