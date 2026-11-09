@@ -1,10 +1,4 @@
-import {
-  Lightbulb,
-  User,
-  Smartphone,
-  Brain,
-  ArrowUpRight,
-} from "lucide-react";
+import { Lightbulb, User, Smartphone, Brain, ArrowUpRight } from "lucide-react";
 
 import { Reveal } from "../components/reveal";
 import { RevealGroup } from "../components/revealGroup";
@@ -69,17 +63,12 @@ export const About = () => {
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="grid items-center gap-16 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          
           {/* =================================
               LEFT COLUMN
           ================================= */}
           <div>
             {/* Section eyebrow */}
-            <Reveal
-              direction="up"
-              distance={14}
-              duration={600}
-            >
+            <Reveal direction="up" distance={14} duration={600}>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-8 bg-primary" />
 
@@ -90,12 +79,7 @@ export const About = () => {
             </Reveal>
 
             {/* Heading */}
-            <Reveal
-              direction="up"
-              distance={22}
-              delay={80}
-              duration={700}
-            >
+            <Reveal direction="up" distance={22} delay={80} duration={700}>
               <h2 className="max-w-xl text-4xl font-bold leading-[1.08] tracking-[-0.035em] text-foreground md:text-5xl lg:text-[3.5rem]">
                 Building ideas into{" "}
                 <span className="font-serif font-normal italic text-primary">
@@ -105,67 +89,51 @@ export const About = () => {
             </Reveal>
 
             {/* Biography */}
-            <Reveal
-              direction="up"
-              distance={20}
-              delay={180}
-              duration={700}
-            >
+            <Reveal direction="up" distance={20} delay={180} duration={700}>
               <div className="mt-8 max-w-xl space-y-5 text-[1.05rem] leading-8 text-muted-foreground">
-  <p>
-    I’m Daniel, a Computer Science student and software engineer
-    focused on turning real problems into scalable web and mobile
-    products.
-  </p>
+                <p>
+                  I’m Daniel, a Computer Science student and software engineer
+                  focused on turning real problems into scalable web and mobile
+                  products.
+                </p>
 
-  <p>
-    I learn by building. My goal is to create 50 problem-solving
-    products while continually sharpening my engineering,
-    collaboration, and product-thinking skills.
-  </p>
-</div>
+                <p>
+                  I learn by building. My goal is to create 50 problem-solving
+                  products while continually sharpening my engineering,
+                  collaboration, and product-thinking skills.
+                </p>
+              </div>
             </Reveal>
 
             {/* Impact metrics */}
-<Reveal
-  direction="up"
-  distance={18}
-  delay={260}
-  duration={700}
->
-  <div className="mt-10 border-y border-border py-6">
-    <div className="grid grid-cols-3">
-      {metrics.map((metric, index) => (
-        <div
-          key={metric.label}
-          className={`
+            <Reveal direction="up" distance={18} delay={260} duration={700}>
+              <div className="mt-10 border-y border-border py-6">
+                <div className="grid grid-cols-3">
+                  {metrics.map((metric, index) => (
+                    <div
+                      key={metric.label}
+                      className={`
             group relative
             ${index !== 0 ? "border-l border-border" : ""}
             ${index === 0 ? "pr-4" : "px-4"}
           `}
-        >
-          <div className="text-3xl font-bold tracking-[-0.04em] text-primary transition-transform duration-300 group-hover:-translate-y-0.5 md:text-4xl">
-            {metric.value}
-          </div>
+                    >
+                      <div className="text-3xl font-bold tracking-[-0.04em] text-primary transition-transform duration-300 group-hover:-translate-y-0.5 md:text-4xl">
+                        {metric.value}
+                      </div>
 
-          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:normal-case sm:tracking-normal">
-            {metric.label}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</Reveal>
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:normal-case sm:tracking-normal">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
 
             {/* Mission statement */}
-            <Reveal
-              direction="up"
-              distance={18}
-              delay={360}
-              duration={700}
-            >
+            <Reveal direction="up" distance={18} delay={360} duration={700}>
               <div className="group relative mt-9 overflow-hidden rounded-2xl border border-border bg-secondary/55 p-6 transition duration-300 hover:border-primary/20 hover:bg-secondary">
-                
                 {/* Violet accent */}
                 <div
                   aria-hidden="true"
@@ -179,8 +147,8 @@ export const About = () => {
                     </p>
 
                     <p className="text-lg font-medium leading-7 text-foreground">
-                      Build useful, thoughtful products that solve real
-                      problems and create better digital experiences.
+                      Build useful, thoughtful products that solve real problems
+                      and create better digital experiences.
                     </p>
                   </div>
 
