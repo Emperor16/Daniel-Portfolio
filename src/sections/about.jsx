@@ -40,7 +40,7 @@ const metrics = [
   {
     value: 10,
     suffix: "K+",
-    label: "People reached",
+    label: "Registered users",
   },
   {
     value: 50,
