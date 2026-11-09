@@ -132,6 +132,37 @@ export const About = () => {
               </div>
             </Reveal>
 
+            {/* Impact metrics */}
+<Reveal
+  direction="up"
+  distance={18}
+  delay={260}
+  duration={700}
+>
+  <div className="mt-10 border-y border-border py-6">
+    <div className="grid grid-cols-3">
+      {metrics.map((metric, index) => (
+        <div
+          key={metric.label}
+          className={`
+            group relative
+            ${index !== 0 ? "border-l border-border" : ""}
+            ${index === 0 ? "pr-4" : "px-4"}
+          `}
+        >
+          <div className="text-3xl font-bold tracking-[-0.04em] text-primary transition-transform duration-300 group-hover:-translate-y-0.5 md:text-4xl">
+            {metric.value}
+          </div>
+
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:normal-case sm:tracking-normal">
+            {metric.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Reveal>
+
             {/* Mission statement */}
             <Reveal
               direction="up"
