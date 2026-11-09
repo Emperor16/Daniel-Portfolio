@@ -22,13 +22,9 @@ export const Reveal = ({
 
     if (!element) return;
 
-    /*
-     * Fallback for browsers or environments where
-     * IntersectionObserver is unavailable.
-     *
-     * The content remains visible instead of becoming
-     * permanently hidden.
-     */
+  // excellenece at his peak
+  //fallback for browser whrer intersectionobeerver 
+  //is unabaulble- 
     if (!("IntersectionObserver" in window)) {
       setIsVisible(true);
       return;
