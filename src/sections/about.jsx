@@ -96,7 +96,7 @@ export const About = () => {
             <Reveal direction="up" distance={20} delay={180} duration={700}>
               <div className="mt-8 max-w-xl space-y-5 text-[1.05rem] leading-8 text-muted-foreground">
                 <p>
-                  I’m Daniel, a Computer Science student and software engineer
+                  Hello, Business driven person. I am Daniel a Computer science graduate and software engineer
                   focused on turning real problems into scalable web and mobile
                   products.
                 </p>
