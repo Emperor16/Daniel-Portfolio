@@ -24,7 +24,7 @@ export const Reveal = ({
 
   // excellenece at his peak
   //fallback for browser whrer intersectionobeerver 
-  //is unabaulble- 
+  //is unabaulble- #danielcodes
     if (!("IntersectionObserver" in window)) {
       setIsVisible(true);
       return;
